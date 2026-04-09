@@ -1,0 +1,684 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumerate}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+% Theorem environments
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{criterion}[theorem]{Criterion}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\title{Quadratic Completion of Admissible Spectral Pairs\\
+via Binary-Icosahedral Representation\\[0.5em]
+\large O26 --- Spectral Admissibility Sub-programme}
+
+\author{J\'er\^ome Beau\\
+\small Independent Researcher}
+
+\date{April 2026}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{abstract}
+    We investigate the structural nature of the pair observable
+    $\sigma_{\mathrm{pair}}(n) = \sigma_c(n)\,\sigma_{q-c}(n)$ arising in the
+    Weil-block analysis of the Heisenberg Cayley graphs
+    $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$.
+    Building on the canonical construction of conjugate pairs enforced by the
+    parity involution~\cite{Beau2026a22} and the normalisation invariance
+    established in O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23},
+    we construct an explicit dictionary between conjugate Weil blocks and rank-one
+    matrix coefficients in a representation space.
+
+    We show that, in the pre-saturation regime, $\sigma_{\mathrm{pair}}(n)$ has the
+    same growth exponent as the Hilbert--Schmidt norm of an associated matrix
+    trajectory, establishing a Level~I identification (proved).
+    We then formulate a hierarchy of stronger identifications:
+    a quotient identification modulo normalisation (Level~II), and a canonical
+    representation-theoretic identification (Level~III), conjectured to take place
+    in an isotypic sector of the binary icosahedral group $2I$ along the admissibility
+    thread $Q_8 \subset 2I \subset \mathrm{SU}(2)$.
+
+    We provide concrete falsifiability tests based on the effective dimension of the
+    trajectory in $\mathrm{End}(V_\rho)$, directly computable from O25
+    data~\cite{Beau2026a28}.
+    A positive result would identify $\sigma_{\mathrm{pair}}$ as the restriction of a
+    canonical Hermitian quadratic form and provide the first representation-theoretic
+    interpretation of the admissible cascade exponent $\beta^*$.
+    A negative result would still determine the correct ambient representation sector,
+    refining the admissibility hierarchy without invalidating the dictionary.
+  \end{abstract}
+
+  \tableofcontents
+  \bigskip
+
+  \section{Background and motivation}
+    \label{sec:background}
+
+    The spectral admissibility programme (O1--O25) studies the emergence of observable
+    scaling laws from the bounded-flux dynamics of the Cosmochrony substrate~$\chi$~\cite{Cosmochrony}.
+    A central object is the Gram--Schmidt redundancy observable
+    \begin{equation}
+      \sigma_c(n) = \frac{\delta r_n}{|S_n|},
+    \end{equation}
+    defined on BFS shells $S_n$ of Cayley graphs associated with
+    $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$.
+
+    Early analyses based on scalar observables led to systematic discrepancies in the
+    extracted exponent~$\delta$ (O11--O14~\cite{Beau2026a15,Beau2026a16,Beau2026a17,Beau2026a18}).
+    This mismatch was resolved in O16~\cite{Beau2026a20} by identifying the correct observable as
+    the \emph{conjugate pair observable}
+    \begin{equation}
+      \sigma^{\mathrm{can}}_{\mathrm{pair}}(n) = \sigma_c(n)\,\sigma_{q-c}(n),
+    \end{equation}
+    which doubles the exponent and yields values in the admissible window
+    $\delta_{\mathrm{pair}} \in [7.4, 10.6]$.
+
+    The necessity of pairing is structural.
+    O18~\cite{Beau2026a22} shows that every fibre of the projection $\Pi$ contains
+    the parity involution $\chi \mapsto -\chi$, which induces the conjugation relation
+    $\rho_{q-c} = \overline{\rho_c}$ at the Weil level.
+    O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23} establish that the apparent
+    asymmetry between $c$ and $q-c$ is a normalisation artefact, not a structural feature.
+
+    The present note addresses the following question:
+    \begin{quote}
+      Is the bilinear form $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$ an intrinsic
+      quadratic object, or merely a product enforced by symmetry?
+    \end{quote}
+    We show that $\sigma^{\mathrm{can}}_{\mathrm{pair}}$ admits a natural interpretation
+    as the pullback of a Hermitian quadratic form on a representation space, and formulate
+    precise criteria under which this interpretation becomes canonical.
+
+  \section{The admissible $2I$ thread and the 600-cell}
+    \label{sec:2I}
+
+    The admissibility analysis of~\cite{Beau2026a1,Beau2026a3} classifies the finite
+    subgroups of $\mathrm{SU}(2)$ compatible with bounded-flux admissibility constraints,
+    identifying the chain
+    \begin{equation}
+      Q_8 \subset 2I \subset \mathrm{SU}(2),
+    \end{equation}
+    where $2I$ is the binary icosahedral group of order $120$.
+    Among the admissible families, the binary polyhedral groups $2O$ and $2I$ are
+    distinguished by the isotropy of their second-moment tensor~\cite{Beau2026a3},
+    making $2I$ the maximal admissible finite subgroup of $\mathrm{SU}(2)$.
+
+    The group $2I$ admits irreducible representations of dimensions
+    \begin{equation}
+      d_\rho \in \{1, 2, 2, 3, 3, 4, 4, 5, 6\},
+    \end{equation}
+    and its matrix coefficient spaces $\mathrm{End}(V_\rho)$ have dimensions $d_\rho^2$,
+    forming the canonical Peter--Weyl decomposition of $L^2(2I)$.
+
+    Geometrically, $2I$ is the rotational symmetry group of the regular 600-cell in
+    $\mathbb{R}^4$, whose $120$ vertices correspond to the elements of $2I$.
+    The Laplacian spectrum of this structure can be organised representation-theoretically,
+    with multiplicity patterns consistent with the Peter--Weyl dimensions $d_\rho^2$ of
+    the irreps of $2I$~\cite{Beau2026a1}.
+    This is not a coincidence imported from external geometry: the same representation-theoretic
+    hierarchy governs both the spectral decomposition of $2I$ and the organisation
+    of admissible degrees of freedom along the thread $Q_8 \subset 2I \subset \mathrm{SU}(2)$.
+
+    The question addressed in this note is whether the conjugate-pair observable
+    $\sigma^{\mathrm{can}}_{\mathrm{pair}}$ selects one of these isotypic sectors and
+    realises its canonical quadratic form through the Gram--Schmidt dynamics.
+
+  \section{The dictionary: conjugate Weil blocks and isotypic sectors of $2I$}
+    \label{sec:dictionary}
+
+    This section establishes the explicit correspondence between the pair observable
+    $\sigma^{\mathrm{can}}_{\mathrm{pair}}$ on conjugate Weil blocks $\{c, q-c\}$
+    and a natural Hermitian quadratic form on an isotypic sector of $2I$.
+    The dictionary has three layers: the Weil side (§\ref{sec:dict-weil}),
+    the $2I$ side (§\ref{sec:dict-2I}), and the identification map (§\ref{sec:dict-map}).
+
+    \subsection{The Weil side: structure of $\sigma^{\mathrm{can}}_{\mathrm{pair}}$}
+      \label{sec:dict-weil}
+
+      Fix a prime $q$ and a generic block $c_{\mathrm{block}} = (c_1, c_2, c_3)$
+      with $c_i \neq 0$ and $c_1 + c_2 + c_3 \not\equiv 0 \pmod{q}$.
+      The Gram--Schmidt redundancy at BFS shell $n$ is
+      \begin{equation}
+        \sigma_c(n) = \frac{\delta r_n}{|S_n|},
+      \end{equation}
+      where $\delta r_n$ counts the number of Weil fingerprint vectors in shell $S_n$
+      linearly independent of the span built over shells $0, \ldots, n-1$~\cite{Beau2026a16}.
+      The canonical pair observable is
+      \begin{equation}
+        \sigma^{\mathrm{can}}_{\mathrm{pair}}(n) = \sigma_c(n)\,\sigma_{q-c}(n).
+      \end{equation}
+
+      The structural basis of this definition rests on two results from O17--O18.
+      First, the conjugation identity $\rho_{q-c} = \overline{\rho_c}$ together with
+      the norm-invariance of Gram--Schmidt orthogonalisation implies $\delta_{q-c} = \delta_c$
+      for all admissible~$c$~\cite{Beau2026a21}.
+      Second, the proportionality $\sigma_{q-c}(n) = r(c,q)\,\sigma_c(n)$, with
+      $r(c,q) \in \{1,2,3,4\}$ independent of $n$, holds to machine precision
+      ($|\sigma_{q-c}(n)/\sigma_c(n) - r(c,q)| < 10^{-14}$ for all tested pairs
+      and shells)~\cite{Beau2026a20}.
+      Critically, O17~\cite{Beau2026a21} demonstrates that $r(c,q)$ is a normalisation
+      artefact of the pipeline determined by the initial supports $(b_1, b_2)$ of each
+      block sample, not an intrinsic invariant of the representation.
+      The structurally robust quantity is therefore $\delta_c = \delta_{q-c}$, and the
+      canonical form of the pair observable removes the artefact by working with
+      the product $\sigma_c(n)\,\sigma_{q-c}(n)$ rather than each factor in isolation.
+
+      \begin{remark}[Gauge-like nature of $r(c,q)$]
+  The factor $r(c,q)$ plays the role of a gauge degree of freedom in the pipeline:
+  it depends on sampling initial conditions, not on the representation.
+  The matrix $M_n$ defined in §\ref{sec:dict-map} must be constructed so that
+  $\|\widetilde{M}_n\|_{\mathrm{HS}}^2$ is independent of this gauge choice,
+  i.e.\ it absorbs $r(c,q)$ into a normalisation convention rather than treating
+  it as structural data.
+      \end{remark}
+
+    \subsection{The $2I$ side: isotypic sectors and the Peter--Weyl quadratic form}
+      \label{sec:dict-2I}
+
+      For each irrep $\rho$ of $2I$ with representation space $V_\rho$ of dimension
+      $d_\rho$, the Peter--Weyl theorem provides a canonical space of matrix coefficients:
+      \begin{equation}
+        \mathcal{H}_\rho
+        = \{f : 2I \to \mathbb{C} \mid f(g) = \langle u, \rho(g) v \rangle,\;
+        u, v \in V_\rho\}
+        \simeq V_\rho \otimes \overline{V_\rho}
+        \simeq \mathrm{End}(V_\rho),
+      \end{equation}
+      which has dimension $d_\rho^2$.
+      This space carries a canonical Hermitian inner product, the Hilbert--Schmidt form:
+      \begin{equation}
+        \langle A, B \rangle_{\mathrm{HS}} = \mathrm{tr}(A^\dagger B),
+        \qquad \|A\|_{\mathrm{HS}}^2 = \mathrm{tr}(A^\dagger A),
+        \quad A, B \in \mathrm{End}(V_\rho).
+        \label{eq:HS-form}
+      \end{equation}
+      For a rank-one element $A = u \otimes \overline{v}$, this reduces to
+      \begin{equation}
+        \|u \otimes \overline{v}\|_{\mathrm{HS}}^2 = \|u\|^2 \cdot \|v\|^2.
+        \label{eq:HS-rank1}
+      \end{equation}
+      This is the key structural fact: the Hilbert--Schmidt norm of a rank-one
+      endomorphism is the product of the norms of its two factors.
+
+    \subsection{The dictionary map}
+      \label{sec:dict-map}
+
+      \paragraph{Construction.}
+        For each BFS shell $n$ and each conjugate pair $\{c, q-c\}$, define the
+        \emph{un-normalised matrix coefficient}
+      \begin{equation}
+        \widetilde{M}_n := v_c^{(n)} \otimes \overline{v_{q-c}^{(n)}},
+        \label{eq:Mn-unnorm}
+        \end{equation}
+        where $v_c^{(n)}$ is the vector whose $s$-th component is the residual norm
+        $\|r_s^{(n)}\|$ of the $s$-th Weil fingerprint vector in shell $S_n$ after
+        projection onto the Gram--Schmidt span built over shells $0, \ldots, n-1$,
+        and similarly for $v_{q-c}^{(n)}$.
+
+      \paragraph{Central identity.}
+        By~\eqref{eq:HS-rank1},
+      \begin{equation}
+        \|\widetilde{M}_n\|_{\mathrm{HS}}^2
+        = \|v_c^{(n)}\|^2 \cdot \|v_{q-c}^{(n)}\|^2
+        \sim \sigma_c(n) \cdot \sigma_{q-c}(n)
+        = \sigma^{\mathrm{can}}_{\mathrm{pair}}(n).
+        \label{eq:identity}
+        \end{equation}
+
+      \begin{remark}[From pipeline quantity to structural norm]
+  The proportionality $\|v_c^{(n)}\|^2 \sim \sigma_c(n)$ in~\eqref{eq:identity}
+  is not an additional assumption; it follows from the definition of the
+  Gram--Schmidt observable and a single normalisation choice.
+
+  With the convention above, $\|v_c^{(n)}\|^2 = \sum_{s \in S_n} \|r_s^{(n)}\|^2$,
+  the total squared residual energy contributed by shell $S_n$.
+  By construction, $\sigma_c(n) = \delta r_n / |S_n|$, where $\delta r_n$ is the
+  rank increment of shell $S_n$.
+
+  Under the canonical normalisation of the fingerprint vectors adopted in
+  O12--O19~\cite{Beau2026a16,Beau2026a21,Beau2026a22,Beau2026a23}, each fingerprint
+  vector has unit initial norm.
+  The proportionality
+  \begin{equation}
+    \|v_c^{(n)}\|^2 = \kappa \cdot |S_n| \cdot \sigma_c(n) + \varepsilon_n
+    \label{eq:norm-sigma-relation}
+  \end{equation}
+  holds with $\kappa > 0$ a normalisation constant independent of $n$, and
+  $\varepsilon_n$ a remainder bounded by the contribution of vectors below the
+  rank threshold.
+  In the pre-saturation regime (the fitting window $[n_0, n_1]$ used throughout
+  O16--O25), $\varepsilon_n / (|S_n| \cdot \sigma_c(n)) \to 0$ as the
+  rank-threshold vectors become negligible relative to the total shell size.
+
+  Identity~\eqref{eq:identity} therefore holds in the pre-saturation regime with
+  a proportionality constant $\kappa^2 |S_n|^2$ absorbed into the pipeline
+  normalisation.
+  The power-law exponent $\delta_{\mathrm{pair}}$, extracted from the log-log
+  regression of $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$, is unaffected by
+  this constant factor.
+        \end{remark}
+
+      \paragraph{Three verification criteria.}
+
+      \begin{enumerate}[label=(\roman*)]
+
+\item \textbf{Involution compatibility.}
+The parity involution $c \leftrightarrow q-c$ corresponds, via the conjugation
+identity $\rho_{q-c} = \overline{\rho_c}$, to complex conjugation
+$v \mapsto \overline{v}$ on the representation space.
+This is precisely the anti-linear involution that exchanges
+$u \otimes \overline{v}$ and $v \otimes \overline{u}$ in $\mathrm{End}(V_\rho)$,
+i.e.\ Hermitian adjunction $A \mapsto A^\dagger$.
+The pair observable $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n) =
+\sigma_c(n)\,\sigma_{q-c}(n)$ is symmetric under this exchange, consistent
+with $\|A\|_{\mathrm{HS}}^2 = \|A^\dagger\|_{\mathrm{HS}}^2$.
+Involution compatibility holds.
+
+\item \textbf{Gauge invariance.}
+The observable $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$ is invariant under
+rescaling $v_c^{(n)} \mapsto \lambda v_c^{(n)}$,
+$v_{q-c}^{(n)} \mapsto \lambda^{-1} v_{q-c}^{(n)}$ with $\lambda > 0$,
+because $\sigma_c(n)$ scales as $\lambda^2$ and $\sigma_{q-c}(n)$ as
+$\lambda^{-2}$, leaving the product unchanged.
+Correspondingly, $\|\widetilde{M}_n\|_{\mathrm{HS}}^2$ is invariant under
+$(u, v) \mapsto (\lambda u, \lambda^{-1} v)$ in the rank-one element
+$u \otimes \overline{v}$.
+Gauge invariance holds.
+
+\item \textbf{$\delta_{\mathrm{pair}}$ stability.}
+The exponent $\delta_{\mathrm{pair}}$ is extracted from the log-log regression
+of $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$ over the fitting window.
+By~\eqref{eq:identity}, this is the same as the log-log regression of
+$\|\widetilde{M}_n\|_{\mathrm{HS}}^2$.
+The verticality theorem of O24~\cite{Beau2026a28} establishes that
+$\delta_{\mathrm{pair}}$ is stable under fibre perturbations; this translates,
+via the dictionary, into the statement that $\|\widetilde{M}_n\|_{\mathrm{HS}}^2$
+grows with a well-defined power-law exponent independent of the choice of
+conjugate pair.
+$\delta_{\mathrm{pair}}$ stability holds.
+
+        \end{enumerate}
+
+  \subsection{Strength of the identification}
+    \label{sec:dict-strength}
+
+    Identity~\eqref{eq:identity} establishes the correspondence at \emph{intermediate
+  strength} in the sense of §\ref{sec:conjecture}: $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$
+    is proportional to $\|\widetilde{M}_n\|_{\mathrm{HS}}^2$, with a proportionality
+    constant that is pipeline-normalisation-dependent and hence not intrinsic.
+
+    The \emph{strong} identification requires the proportionality constant to be
+    canonically fixed by the $2I$-representation theory, i.e.\ that $\widetilde{M}_n$
+    takes values in a specific isotypic component $\mathcal{H}_\rho$ for a
+    representation $\rho$ selected by the admissibility thread
+    $Q_8 \subset 2I \subset \mathrm{SU}(2)$.
+    The admissibility hierarchy of~\cite{Beau2026a1} selects the spin-$\frac{1}{2}$
+    sector (dimension $d_\rho = 2$, Laplacian eigenvalue $\lambda_{1/2} = 18$) as
+    the dominant admissible sector on the $2I$ Cayley graph.
+    If $v_c^{(n)} \in V_\rho$ for this sector, then $\widetilde{M}_n \in \mathrm{End}(V_\rho)$
+    has $d_\rho^2 = 4$ components.
+    This identification is at present a conjecture, formulated precisely in §\ref{sec:conjecture}.
+
+  \section{The conjecture at three levels}
+  \label{sec:conjecture}
+
+  Building on the dictionary of §\ref{sec:dictionary}, we formulate a graduated
+  identification between the pair observable $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$
+  and the Hilbert--Schmidt quadratic form on an isotypic sector of $2I$.
+  The three levels differ in the strength of the claim: growth equivalence (proved),
+  quotient identification (structural), and canonical identification (conjectural).
+
+  \subsection{Level I: Growth equivalence (proved)}
+    \label{sec:level1}
+
+    \begin{proposition}[Level~I]
+  In the pre-saturation regime $n \in [n_0, n_1]$, the pair observable and the
+  Hilbert--Schmidt norm of $\widetilde{M}_n$ have identical power-law growth exponents:
+  \begin{equation}
+    \delta_{\mathrm{pair}} = \delta_{\mathrm{HS}},
+    \label{eq:level1}
+  \end{equation}
+  where $\delta_{\mathrm{HS}}$ is defined by the log-log regression of
+  $\|\widetilde{M}_n\|_{\mathrm{HS}}^2$ over the same fitting window.
+    \end{proposition}
+
+    \begin{proof}
+      By~\eqref{eq:identity} and~\eqref{eq:norm-sigma-relation},
+      $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)
+      = \kappa^2 |S_n|^2 \|\widetilde{M}_n\|_{\mathrm{HS}}^2 + O(\varepsilon_n)$,
+      where the prefactor $\kappa^2 |S_n|^2$ is independent of the conjugate pair.
+      Taking log-log regression over $[n_0, n_1]$ and noting that $|S_n|$ grows
+      as a fixed power of $n$ (determined by the BFS geometry of $G_q$, independent
+      of $c$), the regressions of $\log \sigma^{\mathrm{can}}_{\mathrm{pair}}$ and
+      $\log \|\widetilde{M}_n\|_{\mathrm{HS}}^2$ differ only in their intercepts.
+      Hence $\delta_{\mathrm{pair}} = \delta_{\mathrm{HS}}$.
+    \end{proof}
+
+    \begin{remark}
+      Level~I is not a conjecture but a direct consequence of the dictionary
+      construction of §\ref{sec:dictionary}.
+      It is stated separately to clarify what is proved and what remains conjectural
+      at Levels~II and~III.
+    \end{remark}
+
+  \subsection{Level II: Quotient identification (structural)}
+    \label{sec:level2}
+
+    The proportionality factor $\kappa^2 |S_n|^2$ has two sources: the global
+    normalisation convention of the fingerprint vectors (absorbed in $\kappa$) and
+    the shell-size scaling (absorbed in $|S_n|^2$).
+    Both are pipeline conventions rather than representation-theoretic data.
+    Define the \emph{normalisation equivalence}
+    \begin{equation}
+      A \approx B \quad \Longleftrightarrow \quad A = C \cdot B,
+    \end{equation}
+    where $C > 0$ depends only on pipeline conventions and the BFS geometry of $G_q$,
+    but not on the conjugate pair $\{c, q-c\}$ or the shell index $n$.
+
+    \begin{conjecture}[Level~II]
+      \label{conj:level2}
+      In the normalisation equivalence class defined above,
+      \begin{equation}
+        \sigma^{\mathrm{can}}_{\mathrm{pair}}(n)
+        \approx \|\widetilde{M}_n\|_{\mathrm{HS}}^2.
+        \label{eq:level2}
+      \end{equation}
+      Equivalently, $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$ is the pullback of
+      the Hilbert--Schmidt quadratic form on $\mathrm{End}(V_\rho)$ under the
+      dictionary map~\eqref{eq:Mn-unnorm}, modulo a constant depending only on
+      pipeline conventions.
+    \end{conjecture}
+
+    Level~II would follow from Level~I together with a proof that the proportionality
+    constant $\kappa^2 |S_n|^2$ does not depend on $n$ in a way that could alter
+    the pair-level structure.
+    The $n$-dependence of $|S_n|^2$ is BFS-geometric and uniform across pairs,
+    so the primary open point is the $n$-independence of $\kappa$.
+
+  \subsection{Level III: Canonical identification (conjectural)}
+    \label{sec:level3}
+
+    The strong form requires the proportionality constant to be fixed canonically by
+    the representation theory of $2I$, not merely absorbed into a normalisation convention.
+
+    \begin{conjecture}[Level~III]
+      \label{conj:level3}
+      There exists an irreducible representation $\rho$ of $2I$, selected by the
+      admissibility thread $Q_8 \subset 2I \subset \mathrm{SU}(2)$, such that for all
+      admissible pairs $\{c, q-c\}$ and all $n$ in the pre-saturation regime:
+      \begin{enumerate}[label=(\roman*)]
+    \item the residual vector $v_c^{(n)}$ lies in $V_\rho$ under a canonical
+    embedding determined by $\rho$ and $q$;
+    \item the un-normalised matrix coefficient
+    $\widetilde{M}_n = v_c^{(n)} \otimes \overline{v_{q-c}^{(n)}}$
+    takes values in $\mathrm{End}(V_\rho)$;
+    \item the proportionality constant between $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$
+    and $\|\widetilde{M}_n\|_{\mathrm{HS}}^2$ equals $d_\rho^{-2}$,
+    the inverse squared dimension of $\rho$, up to the universal
+    BFS-geometric factor $|S_n|^2$.
+      \end{enumerate}
+    \end{conjecture}
+
+  \subsection{Candidate sector}
+    \label{sec:candidate}
+
+    The admissibility hierarchy of~\cite{Beau2026a1} selects the spin-$\frac{1}{2}$
+    sector of $2I$ as the minimal non-abelian admissible sector: dimension $d_\rho = 2$,
+    Laplacian eigenvalue $\lambda_{1/2} = 18$ on the standard $2I$ Cayley graph.
+    Conjecture~\ref{conj:level3}(iii) would then read: the proportionality constant
+    is $d_\rho^{-2} = \tfrac{1}{4}$, and $\widetilde{M}_n$ takes values in a
+    $4$-dimensional space $\mathrm{End}(V_\rho) \simeq \mathbb{C}^{2 \times 2}$.
+
+    This prediction is falsifiable: a direct computation of $\mathrm{rank}(\mathcal{C}_c)$
+    from the O25 pipeline data (see §\ref{sec:test4}) determines whether the
+    trajectory of $\widetilde{M}_n$ is consistent with a $4$-dimensional ambient
+    space or requires a larger sector.
+
+  \subsection{Structural interpretation}
+    \label{sec:interpretation}
+
+    At Level~I, $\sigma_{\mathrm{pair}}$ and the Hilbert--Schmidt norm share a growth
+    exponent: the identification is asymptotic.
+    At Level~II, $\sigma_{\mathrm{pair}}$ is the Hilbert--Schmidt norm up to a
+    normalisation: the identification is structural modulo convention.
+    At Level~III, $\sigma_{\mathrm{pair}}$ \emph{is} the restriction of a canonical
+    Hermitian quadratic form on a representation space selected by the admissibility
+    thread: the pair observable is no longer a derived bilinear product, but a norm.
+
+  \section{Discriminating criteria and falsifiability}
+  \label{sec:tests}
+
+  The identification proposed in §\ref{sec:conjecture} leads to concrete,
+  computable tests distinguishing the three levels.
+  All tests require no modification of the O25 pipeline and can be evaluated
+  directly from the stored Gram--Schmidt data.
+
+  \subsection{Test 1: Involution compatibility}
+    \label{sec:test1}
+
+    At the scalar level, the conjugation identity $\rho_{q-c} = \overline{\rho_c}$
+    implies $\delta_{q-c} = \delta_c$~\cite{Beau2026a21}.
+    At the matrix level, the dictionary maps $c \leftrightarrow q-c$ to
+    $\widetilde{M}_n \leftrightarrow \widetilde{M}_n^\dagger$ in $\mathrm{End}(V_\rho)$.
+    This is an independent empirical prediction: if the identification is structural,
+    the Frobenius distance
+    \begin{equation}
+      \Delta_n(c) := \bigl\|\widetilde{M}_n(c)^\dagger
+      - \widetilde{M}_n(q-c)\bigr\|_{\mathrm{HS}}
+      \label{eq:test1}
+    \end{equation}
+    must vanish up to numerical precision for all $n \in [n_0, n_1]$.
+
+    \begin{criterion}[Involution]
+  $\Delta_n(c) < \varepsilon_{\mathrm{mach}}$ for all tested pairs and shells.
+    \end{criterion}
+
+    A non-zero $\Delta_n(c)$ that is nonetheless small would indicate that the
+    identification holds only approximately, corresponding to Level~II.
+    A systematic non-zero value would falsify Levels~II and~III simultaneously.
+
+  \subsection{Test 2: Gauge invariance}
+    \label{sec:test2}
+
+    The factor $r(c,q)$ is a normalisation artefact of the pipeline~\cite{Beau2026a21}.
+    The dictionary absorbs it by working with $\widetilde{M}_n$ rather than
+    with individual normalised vectors.
+
+    \begin{criterion}[Gauge invariance]
+  Under the rescaling $v_c^{(n)} \mapsto \lambda\, v_c^{(n)}$,
+  $v_{q-c}^{(n)} \mapsto \lambda^{-1} v_{q-c}^{(n)}$ for $\lambda > 0$,
+  $\|\widetilde{M}_n\|_{\mathrm{HS}}^2$ is invariant.
+    \end{criterion}
+
+    This follows from~\eqref{eq:HS-rank1} by direct computation:
+    $\|\lambda u \otimes \overline{\lambda^{-1} v}\|_{\mathrm{HS}}^2
+    = \lambda^2 \|u\|^2 \cdot \lambda^{-2} \|v\|^2
+    = \|u\|^2 \cdot \|v\|^2$.
+    Test~2 is a consistency check on the construction, expected to hold identically.
+
+  \subsection{Test 3: Exponent stability}
+    \label{sec:test3}
+
+    Level~I (Proposition~\ref{sec:level1}) predicts $\delta_{\mathrm{pair}} = \delta_{\mathrm{HS}}$.
+
+    \begin{criterion}[Exponent stability]
+  For each prime $q \in \{29, 61, 101, 151\}$, compute
+  \begin{equation}
+    \delta_{\mathrm{HS}}(q)
+    = \mathrm{slope}\bigl(
+    \log \|\widetilde{M}_n\|_{\mathrm{HS}}^2 \;\mathrm{vs}\; \log(n+1)
+    \bigr)
+  \end{equation}
+  over the window $[n_0, n_1]$ used in O25 (Table~1 therein; DOI pending deposit).
+  The difference $|\delta_{\mathrm{HS}}(q) - \delta_{\mathrm{pair}}(q)|$
+  must lie within the regression standard error reported in O25.
+    \end{criterion}
+
+    This test is the numerical anchor for the entire construction.
+
+  \subsection{Test 4: Effective dimension of the trajectory}
+    \label{sec:test4}
+
+    This is the central falsifiability test for Level~III.
+    For each conjugate pair $\{c, q-c\}$, construct the empirical covariance operator
+    \begin{equation}
+      \mathcal{C}_c = \frac{1}{N} \sum_{n=n_0}^{n_1}
+      \mathrm{vec}(\widetilde{M}_n)\,\mathrm{vec}(\widetilde{M}_n)^\dagger,
+      \quad N = n_1 - n_0 + 1,
+      \label{eq:covariance}
+    \end{equation}
+    where $\mathrm{vec}$ flattens $\widetilde{M}_n$ into a column vector.
+
+    \begin{criterion}[Effective dimension]
+  Let $r_{\mathrm{eff}}$ be the numerical rank of $\mathcal{C}_c$
+  (number of singular values above threshold
+  $10^{-10} \cdot \sigma_1(\mathcal{C}_c)$).
+  \begin{itemize}
+    \item If $r_{\mathrm{eff}} = 4$ for all pairs: consistent with the
+    spin-$\frac{1}{2}$ sector candidate ($d_\rho = 2$,
+    $\dim\mathrm{End}(V_\rho) = 4$).
+    \item If $r_{\mathrm{eff}} = d_\rho^2$ for some other fixed $d_\rho$:
+    Level~III holds for a different irrep of $2I$; the candidate sector
+    must be revised.
+    \item If $r_{\mathrm{eff}}$ varies across pairs or primes: Level~III fails;
+    the identification holds at most at Level~II.
+  \end{itemize}
+    \end{criterion}
+
+    \begin{remark}
+      The matrix $\widetilde{M}_n$ is reconstructed from the stored vectors
+      $v_c^{(n)}$ and $v_{q-c}^{(n)}$ by outer product.
+      The covariance~\eqref{eq:covariance} and its SVD scale as $O(N d^4)$
+      with $d$ the effective dimension; for $d = 2$ this is negligible.
+      No additional BFS computation or Weil decomposition is required.
+    \end{remark}
+
+  \subsection{Test 5: Universality across pairs}
+    \label{sec:test5}
+
+    Level~III requires that all admissible pairs for a given $q$ probe the same
+    representation sector.
+
+    \begin{criterion}[Universality]
+  The singular value spectra of $\mathcal{C}_c$ and $\mathcal{C}_{c'}$ must agree
+  up to numerical fluctuations for all admissible pairs $c, c'$ at the same
+  prime $q$.
+    \end{criterion}
+
+    A pair-dependent spectrum would indicate that different pairs project onto
+    different subspaces of $\mathrm{End}(V_\rho)$, which is incompatible with a
+    canonical identification.
+    The inter-pair concentration of $\delta_{\mathrm{pair}}$ established in
+    O25 (coefficient of variation dropping from $6.1\%$ to $1.5\%$
+    over $q \in \{29, 61, 101, 151\}$) provides indirect support for this test.
+
+  \subsection{Decision table}
+    \label{sec:decision}
+
+    \begin{center}
+      \begin{tabular}{l|l}
+        \hline
+        Outcome & Interpretation \\
+        \hline
+        Tests~1--3 fail & Dictionary construction fails; §\ref{sec:dictionary} must be revised \\
+        Tests~1--3 pass, $r_{\mathrm{eff}}$ variable & Level~I only \\
+        Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 4$ & Level~II; wrong sector candidate \\
+        Tests~1--4 pass ($r_{\mathrm{eff}} = 4$), Test~5 fails & Level~II with spin-$\tfrac{1}{2}$ sector \\
+        Tests~1--5 pass & Level~III; Conjecture~\ref{conj:level3} confirmed \\
+        \hline
+      \end{tabular}
+    \end{center}
+
+    The row ``Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 4$'' is
+    structurally informative even as a negative result: it identifies the correct
+    representation sector without confirming the spin-$\frac{1}{2}$ candidate,
+    pointing to a specific revision of the admissibility hierarchy argument.
+
+  \section{Implications}
+  \label{sec:implications}
+
+  \subsection{From bilinear observable to canonical norm}
+    \label{sec:impl-norm}
+
+    At Level~III, $\sigma_{\mathrm{pair}}$ is the restriction of a canonical Hermitian
+    quadratic form on $\mathrm{End}(V_\rho)$ selected by the admissibility thread
+    $Q_8 \subset 2I \subset \mathrm{SU}(2)$.
+    The emergence of the pair observable is interpreted as a \emph{quadratic
+  completion}: the passage from a linear object $v_c^{(n)} \in V_\rho$ to a
+    rank-one operator $\widetilde{M}_n \in \mathrm{End}(V_\rho)$ endowed with its
+    natural norm.
+
+  \subsection{Interpretation of the exponent $\beta^*$}
+    \label{sec:impl-beta}
+
+    The transfer chain $c_\chi \to \delta_{\mathrm{pair}} \to \beta^*$ was
+    established unconditionally in O24~\cite{Beau2026a28}, where $\beta^*$ is
+    defined via
+    \begin{equation}
+      \beta^* \approx \frac{1}{\delta_{\mathrm{pair}} + \tfrac{1}{2}}.
+    \end{equation}
+    Under Level~III, $\delta_{\mathrm{pair}}$ characterises the growth of a
+    Hilbert--Schmidt norm along a trajectory in $\mathrm{End}(V_\rho)$, and
+    $\beta^*$ acquires a direct representation-theoretic meaning: it is the
+    effective scaling exponent of norm growth in the minimal admissible
+    non-abelian sector.
+    This provides a structural interpretation of the phenomenological window
+    $\beta^* \in (0.09, 0.13)$~\cite{Beau2026a28} as a constraint on admissible
+    trajectories in representation space, rather than as a purely numerical fit.
+
+  \subsection{Selection of the admissible sector}
+    \label{sec:impl-sector}
+
+    The spin-$\frac{1}{2}$ sector emerges as a candidate not from external physical
+    input, but from internal admissibility constraints~\cite{Beau2026a1}.
+    Test~4 of §\ref{sec:test4} provides a direct verification of this selection.
+    If confirmed, $\mathrm{End}(V_\rho) \simeq \mathbb{C}^{2 \times 2}$ is the
+    minimal ambient space for admissible spectral dynamics.
+    If a different fixed dimension is observed, the admissibility hierarchy must
+    be revised accordingly, but the dictionary of §\ref{sec:dictionary} remains valid.
+
+  \subsection{Role of non-injectivity}
+    \label{sec:impl-noninj}
+
+    The construction makes explicit how non-injectivity of the projection
+    $\Pi : \chi \to \mathcal{O}$ induces a quadratic structure at the observable level.
+    The pairing $\{c, q-c\}$ is not an arbitrary symmetrisation, but the minimal
+    realisation of the parity involution $\chi \mapsto -\chi$ derived in
+    O18~\cite{Beau2026a22} from the Born--Infeld action.
+    The Hermitian structure of $\mathrm{End}(V_\rho)$ is therefore a
+    projection-induced structure: it does not exist at the level of the substrate
+    $\chi$, but emerges from the identification of conjugate fibres under $\Pi$.
+
+  \subsection{Outlook}
+    \label{sec:impl-outlook}
+
+    The results of this note isolate a concrete bridge between the Weil
+    representation of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$, the admissibility
+    thread $Q_8 \subset 2I \subset \mathrm{SU}(2)$, and the observable exponent
+    $\delta_{\mathrm{pair}}$.
+    The tests of §\ref{sec:tests} can be executed on O25 data without additional
+    computation.
+    A positive result at Level~III would provide the first representation-theoretic
+    realisation of the admissible cascade exponent.
+    A negative result with a fixed effective dimension $r_{\mathrm{eff}} \neq 4$
+    would identify the correct ambient sector, refining the admissibility hierarchy
+    without invalidating the dictionary.
+
+    \bibliographystyle{unsrt}
+    \bibliography{cosmochrony-bibliography}
+
+\end{document}
