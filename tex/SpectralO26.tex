@@ -517,9 +517,16 @@ $\delta_{\mathrm{pair}}$ stability holds.
       exponent.
       The structural content of Theorem~\ref{thm:level3} is therefore entirely
       carried by the embedding $\Phi_{q,\rho}$.
-      Among the conditions of Hypothesis~\ref{hyp:embedding}, naturality~(c) is
-      the only one for which no explicit algebraic construction is currently available.
-      Test~4 of §\ref{sec:tests} provides direct numerical evidence for~(c).
+      Hypothesis~\ref{hyp:embedding} has been resolved unconditionally in
+      O27~\cite{Beau2026a31}: the quaternionic rigidity theorem therein shows that
+      any morphism satisfying conditions~(a)--(c) necessarily factors through the
+      admissible quotient $\mathcal{H}_{\mathrm{eff}} \simeq \mathfrak{su}(2)$,
+      and that the canonical construction $\Phi_{q,\rho} = \rho \circ \iota \circ \pi$
+      is the unique such morphism up to unitary equivalence.
+      In particular, naturality~(c) is not an additional assumption but a structural
+      consequence of conditions~(a)--(b) and the Born--Infeld admissibility.
+      Test~4 of §\ref{sec:tests} provides direct numerical evidence for the sector
+      selected by this construction.
     \end{remark}
 
   \subsection{Candidate sector}
@@ -610,7 +617,7 @@ $\delta_{\mathrm{pair}}$ stability holds.
     \log \|\widetilde{M}_n\|_{\mathrm{HS}}^2 \;\mathrm{vs}\; \log(n+1)
     \bigr)
   \end{equation}
-  over the window $[n_0, n_1]$ used in O25 (Table~1 therein; DOI pending deposit).
+  over the window $[n_0, n_1]$ used in O25~\cite{Beau2026a29} (Table~2 therein).
   The difference $|\delta_{\mathrm{HS}}(q) - \delta_{\mathrm{pair}}(q)|$
   must lie within the regression standard error reported in O25.
     \end{criterion}
@@ -724,6 +731,9 @@ $\delta_{\mathrm{pair}}$ stability holds.
     $\beta^*$ acquires a direct representation-theoretic meaning: it is the
     effective scaling exponent of norm growth in the minimal admissible
     non-abelian sector.
+    This interpretation is made unconditional in O27~\cite{Beau2026a31} (Corollary~6.1),
+    where the rigidity theorem establishes that this non-abelian sector is necessarily
+    $\mathfrak{su}(2)$ and not any other structure.
     This provides a structural interpretation of the phenomenological window
     $\beta^* \in (0.09, 0.13)$~\cite{Beau2026a28} as a constraint on admissible
     trajectories in representation space, rather than as a purely numerical fit.
@@ -758,13 +768,25 @@ $\delta_{\mathrm{pair}}$ stability holds.
     representation of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$, the admissibility
     thread $Q_8 \subset 2I \subset \mathrm{SU}(2)$, and the observable exponent
     $\delta_{\mathrm{pair}}$.
-    The tests of §\ref{sec:tests} can be executed on O25 data without additional
+    The tests of §\ref{sec:tests} can be executed on O25 data~\cite{Beau2026a29} without additional
     computation.
     A positive result at Level~III would provide the first representation-theoretic
     realisation of the admissible cascade exponent.
     A negative result with a fixed effective dimension $r_{\mathrm{eff}} \neq 4$
     would identify the correct ambient sector, refining the admissibility hierarchy
     without invalidating the dictionary.
+
+    Subsequent to this paper, O27~\cite{Beau2026a31} resolved Hypothesis~\ref{hyp:embedding}
+    unconditionally by proving that any morphism satisfying conditions~(a)--(c) is forced
+    to factor through $\mathfrak{su}(2)$, with canonical construction
+    $\Phi_{q,\rho} = \rho \circ \iota \circ \pi$ unique up to unitary equivalence.
+    The full implication chain is thereby closed at the structural level:
+    \[
+      \text{emergence} \Rightarrow \text{non-injectivity} \Rightarrow
+      \text{pair structure} \Rightarrow \text{quadratic form} \Rightarrow \mathfrak{su}(2).
+    \]
+    The remaining open question is the numerical identification of the correct
+    irreducible sector from O25 data, i.e.\ the value of $d_\rho$ realised by Test~4.
 
     \bibliographystyle{unsrt}
     \bibliography{cosmochrony-bibliography}
