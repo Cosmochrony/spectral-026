@@ -73,179 +73,179 @@ via Binary-Icosahedral Representation\\[0.5em]
 
     \clearpage
   \section{Background and motivation}
-    \label{sec:background}
+  \label{sec:background}
 
-    The spectral admissibility programme (O1--O25) studies the emergence of observable
-    scaling laws from the non-injective projection structure of Cosmochrony~\cite{Cosmochrony},
-    in which the static substrate~$\chi$ is projected onto observable spacetime via~$\Pi$.
-    A central object is the Gram--Schmidt redundancy observable
+  The spectral admissibility programme (O1--O25) studies the emergence of observable
+  scaling laws from the non-injective projection structure of Cosmochrony~\cite{Cosmochrony},
+  in which the static substrate~$\chi$ is projected onto observable spacetime via~$\Pi$.
+  A central object is the Gram--Schmidt redundancy observable
+  \begin{equation}
+    \sigma_c(n) = \frac{\delta r_n}{|S_n|},
+  \end{equation}
+  defined on BFS shells $S_n$ of Cayley graphs associated with
+  $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$.
+
+  Early analyses based on scalar observables led to systematic discrepancies in the
+  extracted exponent~$\delta$ (O11--O14~\cite{Beau2026a15,Beau2026a16,Beau2026a17,Beau2026a18}).
+  This mismatch was resolved in O16~\cite{Beau2026a20} by identifying the correct observable as
+  the \emph{conjugate pair observable}
+  \begin{equation}
+    \sigma^{\mathrm{can}}_{\mathrm{pair}}(n) = \sigma_c(n)\,\sigma_{q-c}(n),
+  \end{equation}
+  which doubles the exponent and yields values in the admissible window
+  $\delta_{\mathrm{pair}} \in [7.4, 10.6]$.
+
+  The necessity of pairing is structural.
+  O18~\cite{Beau2026a22} shows that every fibre of the projection $\Pi$ contains
+  the parity involution $\chi \mapsto -\chi$, which induces the conjugation relation
+  $\rho_{q-c} = \overline{\rho_c}$ at the Weil level.
+  O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23} establish that the apparent
+  asymmetry between $c$ and $q-c$ is a normalisation artefact, not a structural feature.
+
+  The present note addresses the following question:
+  \begin{quote}
+    Is the bilinear form $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$ an intrinsic
+    quadratic object, or merely a product enforced by symmetry?
+  \end{quote}
+  We show that $\sigma^{\mathrm{can}}_{\mathrm{pair}}$ admits a natural interpretation
+  as the pullback of a Hermitian quadratic form on a representation space, and formulate
+  precise criteria under which this interpretation becomes canonical.
+
+  \section{The admissible $2I$ thread and the 600-cell}
+  \label{sec:2I}
+
+  The admissibility analysis of~\cite{Beau2026a1,Beau2026a3} classifies the finite
+  subgroups of $\mathrm{SU}(2)$ compatible with bounded-flux admissibility constraints,
+  identifying the chain
+  \begin{equation}
+    Q_8 \subset 2I \subset \mathrm{SU}(2),
+  \end{equation}
+  where $2I$ is the binary icosahedral group of order $120$.
+  Among the admissible families, the binary polyhedral groups $2O$ and $2I$ are
+  distinguished by the isotropy of their second-moment tensor~\cite{Beau2026a3},
+  making $2I$ the maximal admissible finite subgroup of $\mathrm{SU}(2)$.
+
+  The group $2I$ admits irreducible representations of dimensions
+  \begin{equation}
+    d_\rho \in \{1, 2, 2, 3, 3, 4, 4, 5, 6\},
+  \end{equation}
+  and its matrix coefficient spaces $\mathrm{End}(V_\rho)$ have dimensions $d_\rho^2$,
+  forming the canonical Peter--Weyl decomposition of $L^2(2I)$.
+
+  Geometrically, $2I$ is the rotational symmetry group of the regular 600-cell in
+  $\mathbb{R}^4$, whose $120$ vertices correspond to the elements of $2I$.
+  The Laplacian spectrum of this structure can be organised representation-theoretically,
+  with multiplicity patterns consistent with the Peter--Weyl dimensions $d_\rho^2$ of
+  the irreps of $2I$~\cite{Beau2026a1}.
+  This is not a coincidence imported from external geometry: the same representation-theoretic
+  hierarchy governs both the spectral decomposition of $2I$ and the organisation
+  of admissible degrees of freedom along the thread $Q_8 \subset 2I \subset \mathrm{SU}(2)$.
+
+  The question addressed in this note is whether the conjugate-pair observable
+  $\sigma^{\mathrm{can}}_{\mathrm{pair}}$ selects one of these isotypic sectors and
+  realises its canonical quadratic form through the Gram--Schmidt dynamics.
+
+  \section{The dictionary: conjugate Weil blocks and isotypic sectors of $2I$}
+  \label{sec:dictionary}
+
+  This section establishes the explicit correspondence between the pair observable
+  $\sigma^{\mathrm{can}}_{\mathrm{pair}}$ on conjugate Weil blocks $\{c, q-c\}$
+  and a natural Hermitian quadratic form on an isotypic sector of $2I$.
+  The dictionary has three layers: the Weil side (§\ref{sec:dict-weil}),
+  the $2I$ side (§\ref{sec:dict-2I}), and the identification map (§\ref{sec:dict-map}).
+
+  \subsection{The Weil side: structure of $\sigma^{\mathrm{can}}_{\mathrm{pair}}$}
+    \label{sec:dict-weil}
+
+    Fix a prime $q$ and a generic block $c_{\mathrm{block}} = (c_1, c_2, c_3)$
+    with $c_i \neq 0$ and $c_1 + c_2 + c_3 \not\equiv 0 \pmod{q}$.
+    The Gram--Schmidt redundancy at BFS shell $n$ is
     \begin{equation}
       \sigma_c(n) = \frac{\delta r_n}{|S_n|},
     \end{equation}
-    defined on BFS shells $S_n$ of Cayley graphs associated with
-    $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$.
-
-    Early analyses based on scalar observables led to systematic discrepancies in the
-    extracted exponent~$\delta$ (O11--O14~\cite{Beau2026a15,Beau2026a16,Beau2026a17,Beau2026a18}).
-    This mismatch was resolved in O16~\cite{Beau2026a20} by identifying the correct observable as
-    the \emph{conjugate pair observable}
+    where $\delta r_n$ counts the number of Weil fingerprint vectors in shell $S_n$
+    linearly independent of the span built over shells $0, \ldots, n-1$~\cite{Beau2026a16}.
+    The canonical pair observable is
     \begin{equation}
-      \sigma^{\mathrm{can}}_{\mathrm{pair}}(n) = \sigma_c(n)\,\sigma_{q-c}(n),
+      \sigma^{\mathrm{can}}_{\mathrm{pair}}(n) = \sigma_c(n)\,\sigma_{q-c}(n).
     \end{equation}
-    which doubles the exponent and yields values in the admissible window
-    $\delta_{\mathrm{pair}} \in [7.4, 10.6]$.
 
-    The necessity of pairing is structural.
-    O18~\cite{Beau2026a22} shows that every fibre of the projection $\Pi$ contains
-    the parity involution $\chi \mapsto -\chi$, which induces the conjugation relation
-    $\rho_{q-c} = \overline{\rho_c}$ at the Weil level.
-    O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23} establish that the apparent
-    asymmetry between $c$ and $q-c$ is a normalisation artefact, not a structural feature.
+    The structural basis of this definition rests on two results from O17--O18.
+    First, the conjugation identity $\rho_{q-c} = \overline{\rho_c}$ together with
+    the norm-invariance of Gram--Schmidt orthogonalisation implies $\delta_{q-c} = \delta_c$
+    for all admissible~$c$~\cite{Beau2026a21}.
+    Second, the proportionality $\sigma_{q-c}(n) = r(c,q)\,\sigma_c(n)$, with
+    $r(c,q) \in \{1,2,3,4\}$ independent of $n$, holds to machine precision
+    ($|\sigma_{q-c}(n)/\sigma_c(n) - r(c,q)| < 10^{-14}$ for all tested pairs
+    and shells)~\cite{Beau2026a20}.
+    Critically, O17~\cite{Beau2026a21} demonstrates that $r(c,q)$ is a normalisation
+    artefact of the pipeline determined by the initial supports $(b_1, b_2)$ of each
+    block sample, not an intrinsic invariant of the representation.
+    The structurally robust quantity is therefore $\delta_c = \delta_{q-c}$, and the
+    canonical form of the pair observable removes the artefact by working with
+    the product $\sigma_c(n)\,\sigma_{q-c}(n)$ rather than each factor in isolation.
 
-    The present note addresses the following question:
-    \begin{quote}
-      Is the bilinear form $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$ an intrinsic
-      quadratic object, or merely a product enforced by symmetry?
-    \end{quote}
-    We show that $\sigma^{\mathrm{can}}_{\mathrm{pair}}$ admits a natural interpretation
-    as the pullback of a Hermitian quadratic form on a representation space, and formulate
-    precise criteria under which this interpretation becomes canonical.
-
-  \section{The admissible $2I$ thread and the 600-cell}
-    \label{sec:2I}
-
-    The admissibility analysis of~\cite{Beau2026a1,Beau2026a3} classifies the finite
-    subgroups of $\mathrm{SU}(2)$ compatible with bounded-flux admissibility constraints,
-    identifying the chain
-    \begin{equation}
-      Q_8 \subset 2I \subset \mathrm{SU}(2),
-    \end{equation}
-    where $2I$ is the binary icosahedral group of order $120$.
-    Among the admissible families, the binary polyhedral groups $2O$ and $2I$ are
-    distinguished by the isotropy of their second-moment tensor~\cite{Beau2026a3},
-    making $2I$ the maximal admissible finite subgroup of $\mathrm{SU}(2)$.
-
-    The group $2I$ admits irreducible representations of dimensions
-    \begin{equation}
-      d_\rho \in \{1, 2, 2, 3, 3, 4, 4, 5, 6\},
-    \end{equation}
-    and its matrix coefficient spaces $\mathrm{End}(V_\rho)$ have dimensions $d_\rho^2$,
-    forming the canonical Peter--Weyl decomposition of $L^2(2I)$.
-
-    Geometrically, $2I$ is the rotational symmetry group of the regular 600-cell in
-    $\mathbb{R}^4$, whose $120$ vertices correspond to the elements of $2I$.
-    The Laplacian spectrum of this structure can be organised representation-theoretically,
-    with multiplicity patterns consistent with the Peter--Weyl dimensions $d_\rho^2$ of
-    the irreps of $2I$~\cite{Beau2026a1}.
-    This is not a coincidence imported from external geometry: the same representation-theoretic
-    hierarchy governs both the spectral decomposition of $2I$ and the organisation
-    of admissible degrees of freedom along the thread $Q_8 \subset 2I \subset \mathrm{SU}(2)$.
-
-    The question addressed in this note is whether the conjugate-pair observable
-    $\sigma^{\mathrm{can}}_{\mathrm{pair}}$ selects one of these isotypic sectors and
-    realises its canonical quadratic form through the Gram--Schmidt dynamics.
-
-  \section{The dictionary: conjugate Weil blocks and isotypic sectors of $2I$}
-    \label{sec:dictionary}
-
-    This section establishes the explicit correspondence between the pair observable
-    $\sigma^{\mathrm{can}}_{\mathrm{pair}}$ on conjugate Weil blocks $\{c, q-c\}$
-    and a natural Hermitian quadratic form on an isotypic sector of $2I$.
-    The dictionary has three layers: the Weil side (§\ref{sec:dict-weil}),
-    the $2I$ side (§\ref{sec:dict-2I}), and the identification map (§\ref{sec:dict-map}).
-
-    \subsection{The Weil side: structure of $\sigma^{\mathrm{can}}_{\mathrm{pair}}$}
-      \label{sec:dict-weil}
-
-      Fix a prime $q$ and a generic block $c_{\mathrm{block}} = (c_1, c_2, c_3)$
-      with $c_i \neq 0$ and $c_1 + c_2 + c_3 \not\equiv 0 \pmod{q}$.
-      The Gram--Schmidt redundancy at BFS shell $n$ is
-      \begin{equation}
-        \sigma_c(n) = \frac{\delta r_n}{|S_n|},
-      \end{equation}
-      where $\delta r_n$ counts the number of Weil fingerprint vectors in shell $S_n$
-      linearly independent of the span built over shells $0, \ldots, n-1$~\cite{Beau2026a16}.
-      The canonical pair observable is
-      \begin{equation}
-        \sigma^{\mathrm{can}}_{\mathrm{pair}}(n) = \sigma_c(n)\,\sigma_{q-c}(n).
-      \end{equation}
-
-      The structural basis of this definition rests on two results from O17--O18.
-      First, the conjugation identity $\rho_{q-c} = \overline{\rho_c}$ together with
-      the norm-invariance of Gram--Schmidt orthogonalisation implies $\delta_{q-c} = \delta_c$
-      for all admissible~$c$~\cite{Beau2026a21}.
-      Second, the proportionality $\sigma_{q-c}(n) = r(c,q)\,\sigma_c(n)$, with
-      $r(c,q) \in \{1,2,3,4\}$ independent of $n$, holds to machine precision
-      ($|\sigma_{q-c}(n)/\sigma_c(n) - r(c,q)| < 10^{-14}$ for all tested pairs
-      and shells)~\cite{Beau2026a20}.
-      Critically, O17~\cite{Beau2026a21} demonstrates that $r(c,q)$ is a normalisation
-      artefact of the pipeline determined by the initial supports $(b_1, b_2)$ of each
-      block sample, not an intrinsic invariant of the representation.
-      The structurally robust quantity is therefore $\delta_c = \delta_{q-c}$, and the
-      canonical form of the pair observable removes the artefact by working with
-      the product $\sigma_c(n)\,\sigma_{q-c}(n)$ rather than each factor in isolation.
-
-      \begin{remark}[Gauge-like nature of $r(c,q)$]
+    \begin{remark}[Gauge-like nature of $r(c,q)$]
   The factor $r(c,q)$ plays the role of a gauge degree of freedom in the pipeline:
   it depends on sampling initial conditions, not on the representation.
   The matrix $M_n$ defined in §\ref{sec:dict-map} must be constructed so that
   $\|\widetilde{M}_n\|_{\mathrm{HS}}^2$ is independent of this gauge choice,
   i.e.\ it absorbs $r(c,q)$ into a normalisation convention rather than treating
   it as structural data.
-      \end{remark}
+    \end{remark}
 
-    \subsection{The $2I$ side: isotypic sectors and the Peter--Weyl quadratic form}
-      \label{sec:dict-2I}
+  \subsection{The $2I$ side: isotypic sectors and the Peter--Weyl quadratic form}
+    \label{sec:dict-2I}
 
-      For each irrep $\rho$ of $2I$ with representation space $V_\rho$ of dimension
-      $d_\rho$, the Peter--Weyl theorem provides a canonical space of matrix coefficients:
-      \begin{equation}
-        \mathcal{H}_\rho
-        = \{f : 2I \to \mathbb{C} \mid f(g) = \langle u, \rho(g) v \rangle,\;
-        u, v \in V_\rho\}
-        \simeq V_\rho \otimes \overline{V_\rho}
-        \simeq \mathrm{End}(V_\rho),
-      \end{equation}
-      which has dimension $d_\rho^2$.
-      This space carries a canonical Hermitian inner product, the Hilbert--Schmidt form:
-      \begin{equation}
-        \langle A, B \rangle_{\mathrm{HS}} = \mathrm{tr}(A^\dagger B),
-        \qquad \|A\|_{\mathrm{HS}}^2 = \mathrm{tr}(A^\dagger A),
-        \quad A, B \in \mathrm{End}(V_\rho).
-        \label{eq:HS-form}
-      \end{equation}
-      For a rank-one element $A = u \otimes \overline{v}$, this reduces to
-      \begin{equation}
-        \|u \otimes \overline{v}\|_{\mathrm{HS}}^2 = \|u\|^2 \cdot \|v\|^2.
-        \label{eq:HS-rank1}
-      \end{equation}
-      This is the key structural fact: the Hilbert--Schmidt norm of a rank-one
-      endomorphism is the product of the norms of its two factors.
+    For each irrep $\rho$ of $2I$ with representation space $V_\rho$ of dimension
+    $d_\rho$, the Peter--Weyl theorem provides a canonical space of matrix coefficients:
+    \begin{equation}
+      \mathcal{H}_\rho
+      = \{f : 2I \to \mathbb{C} \mid f(g) = \langle u, \rho(g) v \rangle,\;
+      u, v \in V_\rho\}
+      \simeq V_\rho \otimes \overline{V_\rho}
+      \simeq \mathrm{End}(V_\rho),
+    \end{equation}
+    which has dimension $d_\rho^2$.
+    This space carries a canonical Hermitian inner product, the Hilbert--Schmidt form:
+    \begin{equation}
+      \langle A, B \rangle_{\mathrm{HS}} = \mathrm{tr}(A^\dagger B),
+      \qquad \|A\|_{\mathrm{HS}}^2 = \mathrm{tr}(A^\dagger A),
+      \quad A, B \in \mathrm{End}(V_\rho).
+      \label{eq:HS-form}
+    \end{equation}
+    For a rank-one element $A = u \otimes \overline{v}$, this reduces to
+    \begin{equation}
+      \|u \otimes \overline{v}\|_{\mathrm{HS}}^2 = \|u\|^2 \cdot \|v\|^2.
+      \label{eq:HS-rank1}
+    \end{equation}
+    This is the key structural fact: the Hilbert--Schmidt norm of a rank-one
+    endomorphism is the product of the norms of its two factors.
 
-    \subsection{The dictionary map}
-      \label{sec:dict-map}
+  \subsection{The dictionary map}
+    \label{sec:dict-map}
 
-      \paragraph{Construction.}
-        For each BFS shell $n$ and each conjugate pair $\{c, q-c\}$, define the
-        \emph{un-normalised matrix coefficient}
+    \paragraph{Construction.}
+      For each BFS shell $n$ and each conjugate pair $\{c, q-c\}$, define the
+      \emph{un-normalised matrix coefficient}
       \begin{equation}
         \widetilde{M}_n := v_c^{(n)} \otimes \overline{v_{q-c}^{(n)}},
         \label{eq:Mn-unnorm}
-        \end{equation}
-        where $v_c^{(n)}$ is the vector whose $s$-th component is the residual norm
-        $\|r_s^{(n)}\|$ of the $s$-th Weil fingerprint vector in shell $S_n$ after
-        projection onto the Gram--Schmidt span built over shells $0, \ldots, n-1$,
-        and similarly for $v_{q-c}^{(n)}$.
+      \end{equation}
+      where $v_c^{(n)}$ is the vector whose $s$-th component is the residual norm
+      $\|r_s^{(n)}\|$ of the $s$-th Weil fingerprint vector in shell $S_n$ after
+      projection onto the Gram--Schmidt span built over shells $0, \ldots, n-1$,
+      and similarly for $v_{q-c}^{(n)}$.
 
-      \paragraph{Central identity.}
-        By~\eqref{eq:HS-rank1},
+    \paragraph{Central identity.}
+      By~\eqref{eq:HS-rank1},
       \begin{equation}
         \|\widetilde{M}_n\|_{\mathrm{HS}}^2
         = \|v_c^{(n)}\|^2 \cdot \|v_{q-c}^{(n)}\|^2
         \sim \sigma_c(n) \cdot \sigma_{q-c}(n)
         = \sigma^{\mathrm{can}}_{\mathrm{pair}}(n).
         \label{eq:identity}
-        \end{equation}
+      \end{equation}
 
       \begin{remark}[From pipeline quantity to structural norm]
   The proportionality $\|v_c^{(n)}\|^2 \sim \sigma_c(n)$ in~\eqref{eq:identity}
@@ -278,9 +278,9 @@ via Binary-Icosahedral Representation\\[0.5em]
   The power-law exponent $\delta_{\mathrm{pair}}$, extracted from the log-log
   regression of $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$, is unaffected by
   this constant factor.
-        \end{remark}
+      \end{remark}
 
-      \paragraph{Three verification criteria.}
+    \paragraph{Three verification criteria.}
 
       \begin{enumerate}[label=(\roman*)]
 
@@ -319,27 +319,27 @@ grows with a well-defined power-law exponent independent of the choice of
 conjugate pair.
 $\delta_{\mathrm{pair}}$ stability holds.
 
-        \end{enumerate}
+      \end{enumerate}
 
   \subsection{Strength of the identification}
-    \label{sec:dict-strength}
+  \label{sec:dict-strength}
 
-    Identity~\eqref{eq:identity} establishes the correspondence at \emph{intermediate
+  Identity~\eqref{eq:identity} establishes the correspondence at \emph{intermediate
   strength} in the sense of §\ref{sec:conjecture}: $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$
-    is proportional to $\|\widetilde{M}_n\|_{\mathrm{HS}}^2$, with a proportionality
-    constant that is pipeline-normalisation-dependent and hence not intrinsic.
+  is proportional to $\|\widetilde{M}_n\|_{\mathrm{HS}}^2$, with a proportionality
+  constant that is pipeline-normalisation-dependent and hence not intrinsic.
 
-    The \emph{strong} identification requires the proportionality constant to be
-    canonically fixed by the $2I$-representation theory, i.e.\ that $\widetilde{M}_n$
-    takes values in a specific isotypic component $\mathcal{H}_\rho$ for a
-    representation $\rho$ selected by the admissibility thread
-    $Q_8 \subset 2I \subset \mathrm{SU}(2)$.
-    The admissibility hierarchy of~\cite{Beau2026a1} selects the spin-$\frac{1}{2}$
-    sector (dimension $d_\rho = 2$, Laplacian eigenvalue $\lambda_{1/2} = 18$) as
-    the dominant admissible sector on the $2I$ Cayley graph.
-    If $v_c^{(n)} \in V_\rho$ for this sector, then $\widetilde{M}_n \in \mathrm{End}(V_\rho)$
-    has $d_\rho^2 = 4$ components.
-    This identification is at present a conjecture, formulated precisely in §\ref{sec:conjecture}.
+  The \emph{strong} identification requires the proportionality constant to be
+  canonically fixed by the $2I$-representation theory, i.e.\ that $\widetilde{M}_n$
+  takes values in a specific isotypic component $\mathcal{H}_\rho$ for a
+  representation $\rho$ selected by the admissibility thread
+  $Q_8 \subset 2I \subset \mathrm{SU}(2)$.
+  The admissibility hierarchy of~\cite{Beau2026a1} selects the spin-$\frac{1}{2}$
+  sector (dimension $d_\rho = 2$, Laplacian eigenvalue $\lambda_{1/2} = 18$) as
+  the dominant admissible sector on the $2I$ Cayley graph.
+  If $v_c^{(n)} \in V_\rho$ for this sector, then $\widetilde{M}_n \in \mathrm{End}(V_\rho)$
+  has $d_\rho^2 = 4$ components.
+  This identification is at present a conjecture, formulated precisely in §\ref{sec:conjecture}.
 
   \section{The conjecture at three levels}
   \label{sec:conjecture}
@@ -787,6 +787,29 @@ $\delta_{\mathrm{pair}}$ stability holds.
     \]
     The remaining open question is the numerical identification of the correct
     irreducible sector from O25 data, i.e.\ the value of $d_\rho$ realised by Test~4.
+
+    \begin{remark}[Status of Test~4: numerical attempt]
+      \label{rem:test4-numerical}
+      Test~4 has been partially implemented numerically on O25 data at
+      $q \in \{29, 61\}$.
+      The canonical construction $\Phi_{q,\rho} = \rho \circ \iota \circ \pi$
+      was approximated by taking $\pi$ to be the projection onto the first three
+      Gram--Schmidt basis vectors accumulated during the BFS cascade.
+      This yields $r_{\mathrm{eff}} = 2$ universally across all pairs at $q = 61$,
+      with $\sigma_1/\sigma_2 = 3.000$ exactly, and $r_{\mathrm{eff}} \in \{0, 2\}$
+      at $q = 29$.
+      The result is a structural artefact: the first Gram--Schmidt vector is the
+      DC mode $e_0 = q^{-1/2}[1,\ldots,1]$, shared across all characters~$c$,
+      so $\iota(\pi(v_s))$ collapses to a single direction in $\mathfrak{su}(2)$
+      and $\mathcal{C}_c$ has rank at most~$2$.
+      The correct implementation of $\pi$ requires identifying $H_{\mathrm{eff}}$
+      with the isotypic subspace of $2I$ inside $\ell^2(G_q)$ and restricting
+      the corresponding ADE eigenvectors of $\mathrm{Cay}(G_q, S_q)$ to the
+      Weil representation space $\mathbb{C}^q$ via the Peter--Weyl coefficient map.
+      This is an open problem in the spectral theory of Hecke operators on
+      $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$, identified here as a direction
+      for future work.
+    \end{remark}
 
     \clearpage
     \bibliographystyle{unsrt}
