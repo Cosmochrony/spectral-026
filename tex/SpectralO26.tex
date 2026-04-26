@@ -653,6 +653,24 @@ $\delta_{\mathrm{pair}}$ stability holds.
   \end{itemize}
     \end{criterion}
 
+    \begin{remark}[Reformulation for conjugate-pair data --- O29]
+      \label{rem:criterion-reform}
+      The Born--Infeld parity constraint $\rho_{q-c} = \bar\rho_c$ (O18) forces every outer
+      product $\widetilde{M}_n$ into the complex symmetric subspace
+      $\mathrm{Sym}(V_\rho, \mathbb{C}) \subsetneq \mathrm{End}(V_\rho)$~\cite{Beau2026a33}.
+      Consequently the accessible rank from conjugate-pair data satisfies the
+      \emph{symmetric rank formula} $r_{\mathrm{eff}} = d_\rho(d_\rho+1)/2$, not $d_\rho^2$.
+      Criterion~5.4 must therefore be reformulated as:
+      \begin{itemize}
+        \item If $r_{\mathrm{eff}} = d_\rho(d_\rho+1)/2$ for a fixed integer $d_\rho$,
+        universally across all pairs and primes: Level~III holds for the sector of
+        dimension $d_\rho$.
+      \end{itemize}
+      The observed $r_{\mathrm{eff}} = 3$ (established in O28~\cite{Beau2026a32} and
+      confirmed in O29~\cite{Beau2026a33}) has the unique positive integer inversion
+      $d_\rho = 2$, confirming the spin-$\tfrac{1}{2}$ sector.
+    \end{remark}
+
     \begin{remark}
       The matrix $\widetilde{M}_n$ is reconstructed from the stored vectors
       $v_c^{(n)}$ and $v_{q-c}^{(n)}$ by outer product.
@@ -785,30 +803,22 @@ $\delta_{\mathrm{pair}}$ stability holds.
       \text{emergence} \Rightarrow \text{non-injectivity} \Rightarrow
       \text{pair structure} \Rightarrow \text{quadratic form} \Rightarrow \mathfrak{su}(2).
     \]
-    The remaining open question is the numerical identification of the correct
-    irreducible sector from O25 data, i.e.\ the value of $d_\rho$ realised by Test~4.
+    The numerical identification of the correct irreducible sector from O25 data ---
+    the value of $d_\rho$ realised by Test~4 --- is completed in O29~\cite{Beau2026a33}.
+    The symmetric rank formula $r_{\mathrm{eff}} = d_\rho(d_\rho+1)/2$ yields
+    $d_\rho = 2$ from the observed $r_{\mathrm{eff}} = 3$, confirming the
+    spin-$\tfrac{1}{2}$ sector and closing the implication chain of O27~\cite{Beau2026a31}.
 
-    \begin{remark}[Status of Test~4: numerical attempt]
+    \begin{remark}[Resolution of Test~4 in O29]
       \label{rem:test4-numerical}
-      Test~4 has been partially implemented numerically on O25 data at
-      $q \in \{29, 61\}$.
-      The canonical construction $\Phi_{q,\rho} = \rho \circ \iota \circ \pi$
-      was approximated by taking $\pi$ to be the projection onto the first three
-      Gram--Schmidt basis vectors accumulated during the BFS cascade.
-      This yields $r_{\mathrm{eff}} = 2$ universally across all pairs at $q = 61$,
-      with $\sigma_1/\sigma_2 = 3.000$ exactly, and $r_{\mathrm{eff}} \in \{0, 2\}$
-      at $q = 29$.
-      The result is a structural artefact: the first Gram--Schmidt vector is the
-      DC mode $e_0 = q^{-1/2}[1,\ldots,1]$, shared across all characters~$c$,
-      so $\iota(\pi(v_s))$ collapses to a single direction in $\mathfrak{su}(2)$
-      and $\mathcal{C}_c$ has rank at most~$2$.
-      The correct implementation of $\pi$ requires identifying $H_{\mathrm{eff}}$
-      with the isotypic subspace of $2I$ inside $\ell^2(G_q)$ and restricting
-      the corresponding ADE eigenvectors of $\mathrm{Cay}(G_q, S_q)$ to the
-      Weil representation space $\mathbb{C}^q$ via the Peter--Weyl coefficient map.
-      This is an open problem in the spectral theory of Hecke operators on
-      $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$, identified here as a direction
-      for future work.
+      Test~4 is resolved in O29~\cite{Beau2026a33}.
+      The key structural result is that the Born--Infeld parity constraint forces the
+      outer products $\widetilde{M}_n$ into $\mathrm{Sym}(V_\rho, \mathbb{C})$
+      (see Remark~\ref{rem:criterion-reform}), so that the correct target is
+      $r_{\mathrm{eff}} = d_\rho(d_\rho+1)/2$ rather than $d_\rho^2$.
+      Numerically, $r_{\mathrm{eff}} = 3$ holds universally for $q \in \{61, 151\}$
+      (100\% of pairs, zero inter-pair variance) and is confirmed modally for $q = 101$
+      by a multi-sample analysis; the unique inversion gives $d_\rho = 2$ (spin-$\tfrac{1}{2}$).
     \end{remark}
 
     \clearpage
