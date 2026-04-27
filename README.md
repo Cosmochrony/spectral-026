@@ -11,8 +11,6 @@ It addresses the next structural question after **O25**:
 > Is the pair observable σpair an intrinsic quadratic object,
 > and does it arise from a canonical Hermitian structure?
 
----
-
 ## Quick Summary
 
 σpair is not merely a product of two observables.
@@ -26,8 +24,6 @@ More precisely:
 - it may arise from a canonical representation-theoretic sector (conjectural)
 
 This turns σpair from a constructed observable into a candidate **intrinsic norm**.
-
----
 
 ## Context
 
@@ -50,8 +46,6 @@ However:
 
 This defines the scope of **O26**.
 
----
-
 ## Core Result
 
 The paper establishes that:
@@ -65,8 +59,6 @@ Three levels of identification are introduced:
 - **Level I (proved):** exponent equivalence
 - **Level II (structural):** identification modulo normalisation
 - **Level III (conjectural):** canonical representation-theoretic realisation
-
----
 
 ## Main Structural Results
 
@@ -89,8 +81,6 @@ Thus:
 - σpair corresponds to a **Hilbert–Schmidt norm**
 - the observable is naturally quadratic
 
----
-
 ### 2. Growth equivalence (Level I)
 
 *Result.* The exponent satisfies:
@@ -103,8 +93,6 @@ Thus:
 
 - σpair and the matrix norm share identical scaling
 - the identification is **rigorously established**
-
----
 
 ### 3. Quotient identification (Level II)
 
@@ -119,8 +107,6 @@ Thus:
 - σpair is the pullback of a quadratic form
 - remaining freedom is purely **pipeline normalisation**
 
----
-
 ### 4. Canonical identification (Level III)
 
 *Conjecture.* There exists an irrep ρ of 2I such that:
@@ -133,8 +119,6 @@ Candidate:
 
 - spin-$\tfrac{1}{2}$ sector (dimension 2)
 - $\dim \mathrm{End}(V_\rho) = 4$
-
----
 
 ### 5. Falsifiability via effective dimension
 
@@ -149,8 +133,6 @@ Thus:
 - the representation dimension can be **directly measured**
 - the conjecture is **fully falsifiable**
 
----
-
 ## Foundational Chain from the Substrate
 
 The derivation is fully internal:
@@ -164,8 +146,6 @@ $\to$ numerical validation (O25)
 $\to$ quadratic completion (O26)
 
 No external structure is imposed.
-
----
 
 ## Mathematical Role of O26
 
@@ -184,8 +164,6 @@ More precisely, the paper:
 - isolates normalisation freedom (Level II)
 - proposes a canonical embedding (Level III)
 - defines tests for representation selection
-
----
 
 ## Epistemic Structure of the Paper
 
@@ -215,8 +193,6 @@ More precisely, the paper:
 - large-q validation of dimension
 - analytical derivation of the sector
 
----
-
 ## Interpretation of the Result
 
 The conceptual shift is:
@@ -229,8 +205,6 @@ Thus:
 - the observable is intrinsic, not constructed
 - quadratic structure emerges from projection
 - representation theory becomes physically relevant
-
----
 
 ## Structural Role of O26
 
@@ -251,8 +225,6 @@ Thus:
 - its scaling is validated
 - its structure is interpreted
 
----
-
 ## What O26 Adds
 
 - quadratic interpretation of σpair
@@ -261,8 +233,6 @@ Thus:
 - representation-theoretic embedding
 - falsifiability of the sector
 - bridge between spectral data and representation theory
-
----
 
 ## Outcome
 
@@ -278,8 +248,6 @@ The observable is:
 - intrinsic
 - quadratic
 - potentially representation-theoretic
-
----
 
 ## Residual Open Problems
 
@@ -307,8 +275,6 @@ Verify stability of dimension at larger primes.
 
 Derive the representation structure from admissibility.
 
----
-
 ## Status
 
 The programme is now:
@@ -318,8 +284,6 @@ The programme is now:
 - geometrically lifted (**O26**)
 - ready for representation-theoretic resolution
 
----
-
 ## Repository Structure
 
 ```text
@@ -328,6 +292,7 @@ paper/
 ├── tex/      # LaTeX sources
 └── README.md
 ```
+
 # Citation
 
 If you reference this work, please cite:
