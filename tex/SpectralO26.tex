@@ -5,6 +5,7 @@
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{geometry}
+\usepackage{doi}
 \geometry{margin=2.5cm}
 
 % Theorem environments
@@ -637,7 +638,7 @@ $\delta_{\mathrm{pair}}$ stability holds.
     \end{equation}
     where $\mathrm{vec}$ flattens $\widetilde{M}_n$ into a column vector.
 
-    \begin{criterion}[Effective dimension]
+    \begin{criterion}[Effective dimension --- original formulation]
   Let $r_{\mathrm{eff}}$ be the numerical rank of $\mathcal{C}_c$
   (number of singular values above threshold
   $10^{-10} \cdot \sigma_1(\mathcal{C}_c)$).
@@ -651,6 +652,10 @@ $\delta_{\mathrm{pair}}$ stability holds.
     \item If $r_{\mathrm{eff}}$ varies across pairs or primes: Level~III fails;
     the identification holds at most at Level~II.
   \end{itemize}
+  This criterion is reformulated in Remark~\ref{rem:criterion-reform} below,
+  following O28~\cite{Beau2026a32}: the Born--Infeld parity constraint restricts
+  $\widetilde{M}_n$ to a symmetric subspace, replacing $d_\rho^2$ by the
+  symmetric rank $d_\rho(d_\rho+1)/2$.
     \end{criterion}
 
     \begin{remark}[Reformulation for conjugate-pair data --- O29]
@@ -708,14 +713,23 @@ $\delta_{\mathrm{pair}}$ stability holds.
         \hline
         Tests~1--3 fail & Dictionary construction fails; §\ref{sec:dictionary} must be revised \\
         Tests~1--3 pass, $r_{\mathrm{eff}}$ variable & Level~I only \\
-        Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 4$ & Level~II; wrong sector candidate \\
-        Tests~1--4 pass ($r_{\mathrm{eff}} = 4$), Test~5 fails & Level~II with spin-$\tfrac{1}{2}$ sector \\
+        Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq d_\rho(d_\rho+1)/2$ & Level~II; wrong sector candidate \\
+        Tests~1--4 pass ($r_{\mathrm{eff}} = 3$, $d_\rho = 2$), Test~5 fails & Level~II with spin-$\tfrac{1}{2}$ sector \\
         Tests~1--5 pass & Level~III; Hypothesis~\ref{hyp:embedding} supported; Theorem~\ref{thm:level3} applies \\
         \hline
       \end{tabular}
     \end{center}
 
-    The row ``Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 4$'' is
+    \begin{remark}
+      The original formulation of this table used $r_{\mathrm{eff}} = d_\rho^2$ as the
+      Level~III criterion.
+      This is corrected by Remark~\ref{rem:criterion-reform}: the Born--Infeld parity
+      constraint forces $\widetilde{M}_n \in \mathrm{Sym}(V_\rho, \mathbb{C})$, so the
+      correct target is the symmetric rank $r_{\mathrm{eff}} = d_\rho(d_\rho+1)/2$.
+      For $d_\rho = 2$: $r_{\mathrm{eff}} = 3$, established in O28~\cite{Beau2026a32}.
+    \end{remark}
+
+    The row ``Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq d_\rho(d_\rho+1)/2$'' is
     structurally informative even as a negative result: it identifies the correct
     representation sector without confirming the spin-$\frac{1}{2}$ candidate,
     pointing to a specific revision of the admissibility hierarchy argument.
@@ -788,11 +802,13 @@ $\delta_{\mathrm{pair}}$ stability holds.
     $\delta_{\mathrm{pair}}$.
     The tests of §\ref{sec:tests} can be executed on O25 data~\cite{Beau2026a29} without additional
     computation.
-    A positive result at Level~III would provide the first representation-theoretic
-    realisation of the admissible cascade exponent.
-    A negative result with a fixed effective dimension $r_{\mathrm{eff}} \neq 4$
-    would identify the correct ambient sector, refining the admissibility hierarchy
-    without invalidating the dictionary.
+    The three open questions formulated at the time of writing have since been resolved
+    by O27, O28, and O29~\cite{Beau2026a31,Beau2026a32,Beau2026a33}:
+    Hypothesis~\ref{hyp:embedding} is proved unconditionally (O27),
+    the effective dimension $r_{\mathrm{eff}} = 3$ is established universally
+    across all conjugate pairs at $q \in \{61, 101, 151\}$ (O28),
+    and the sector identification $d_\rho = 2$ (spin-$\tfrac{1}{2}$) is
+    confirmed via the symmetric rank formula $r_{\mathrm{eff}} = d_\rho(d_\rho+1)/2$ (O29).
 
     Subsequent to this paper, O27~\cite{Beau2026a31} resolved Hypothesis~\ref{hyp:embedding}
     unconditionally by proving that any morphism satisfying conditions~(a)--(c) is forced
@@ -821,8 +837,7 @@ $\delta_{\mathrm{pair}}$ stability holds.
       by a multi-sample analysis; the unique inversion gives $d_\rho = 2$ (spin-$\tfrac{1}{2}$).
     \end{remark}
 
-    \clearpage
-    \bibliographystyle{unsrt}
+    \bibliographystyle{plain}
     \bibliography{cosmochrony-bibliography}
 
 \end{document}
