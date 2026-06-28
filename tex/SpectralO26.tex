@@ -526,8 +526,9 @@ $\delta_{\mathrm{pair}}$ stability holds.
       is the unique such morphism up to unitary equivalence.
       In particular, naturality~(c) is not an additional assumption but a structural
       consequence of conditions~(a)--(b) and the Born--Infeld admissibility.
-      Test~4 of §\ref{sec:tests} provides direct numerical evidence for the sector
-      selected by this construction.
+      Test~4 of §\ref{sec:tests} identifies the adjoint carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$
+      underlying this construction (O29~\cite{Beau2026a33}); the spin-$\tfrac{1}{2}$ sector itself is selected
+      by minimality, not by Test~4.
     \end{remark}
 
   \subsection{Candidate sector}
@@ -652,28 +653,26 @@ $\delta_{\mathrm{pair}}$ stability holds.
     \item If $r_{\mathrm{eff}}$ varies across pairs or primes: Level~III fails;
     the identification holds at most at Level~II.
   \end{itemize}
-  This criterion is reformulated in Remark~\ref{rem:criterion-reform} below,
-  following O28~\cite{Beau2026a32}: the Born--Infeld parity constraint restricts
-  $\widetilde{M}_n$ to a symmetric subspace, replacing $d_\rho^2$ by the
-  symmetric rank $d_\rho(d_\rho+1)/2$.
+  This criterion is reinterpreted in Remark~\ref{rem:criterion-reform} below,
+  following O29~\cite{Beau2026a33}: the anti-linear Born--Infeld parity makes $d_\rho^2$
+  inaccessible from conjugate-pair data, and $r_{\mathrm{eff}} = 3$ identifies the adjoint
+  (spin-$1$) carrier $H_{\mathrm{eff}}$ rather than the spin-$\tfrac{1}{2}$ target.
     \end{criterion}
 
-    \begin{remark}[Reformulation for conjugate-pair data --- O29]
+    \begin{remark}[Carrier identification by Test~4 --- O29]
       \label{rem:criterion-reform}
-      The Born--Infeld parity constraint $\rho_{q-c} = \bar\rho_c$ (O18) forces every outer
-      product $\widetilde{M}_n$ into the complex symmetric subspace
-      $\mathrm{Sym}(V_\rho, \mathbb{C}) \subsetneq \mathrm{End}(V_\rho)$~\cite{Beau2026a33}.
-      Consequently the accessible rank from conjugate-pair data satisfies the
-      \emph{symmetric rank formula} $r_{\mathrm{eff}} = d_\rho(d_\rho+1)/2$, not $d_\rho^2$.
-      Criterion~5.4 must therefore be reformulated as:
-      \begin{itemize}
-        \item If $r_{\mathrm{eff}} = d_\rho(d_\rho+1)/2$ for a fixed integer $d_\rho$,
-        universally across all pairs and primes: Level~III holds for the sector of
-        dimension $d_\rho$.
-      \end{itemize}
-      The observed $r_{\mathrm{eff}} = 3$ (established in O28~\cite{Beau2026a32} and
-      confirmed in O29~\cite{Beau2026a33}) has the unique positive integer inversion
-      $d_\rho = 2$, confirming the spin-$\tfrac{1}{2}$ sector.
+      The Born--Infeld parity constraint $\rho_{q-c} = \bar\rho_c$ (O18) is anti-linear, so every outer
+      product $\widetilde{M}_n$ is complex symmetric; the conjugate-pair target $d_\rho^2 = 4$ is therefore
+      inaccessible by construction, and is restored by the locking-broken control of O29~\cite{Beau2026a33}.
+      O29 identifies what Test~4 measures: $r_{\mathrm{eff}} = 3$ is the hard $6 \to 3$ Veronese-collapse
+      invariant of the admissible trajectory, whose three constraint forms span $\mathfrak{so}(3)$ and whose
+      action on $H_{\mathrm{eff}} = \mathbb{C}^3$ is irreducible.
+      Test~4 thus identifies the irreducible adjoint carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$
+      (spin-$1$, vector) of O27~\cite{Beau2026a31}.
+      It does not identify the spin-$\tfrac{1}{2}$ sector, which is the Schur target $V_\rho$ of
+      $\bar\Phi : \mathfrak{su}(2) \to V_\rho$ and requires an independent observable; the spin-$\tfrac{1}{2}$
+      selection rests on the minimality argument of §\ref{sec:candidate} (the minimal non-abelian admissible
+      sector), not on Test~4.
     \end{remark}
 
     \begin{remark}
@@ -713,26 +712,24 @@ $\delta_{\mathrm{pair}}$ stability holds.
         \hline
         Tests~1--3 fail & Dictionary fails; §\ref{sec:dictionary} must be revised \\
         Tests~1--3 pass, $r_{\mathrm{eff}}$ variable & Level~I only \\
-        Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq d_\rho(d_\rho+1)/2$ & Level~II; wrong sector candidate \\
-        Tests~1--4 pass ($r_{\mathrm{eff}} = 3$, $d_\rho = 2$), Test~5 fails & Level~II with spin-$\tfrac{1}{2}$ sector \\
-        Tests~1--5 pass & Level~III confirmed (O27--O29) \\
+        Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 3$ & carrier is not the three-dimensional adjoint; revise the candidate \\
+        Tests~1--3 pass, $r_{\mathrm{eff}} = 3$ (irreducible adjoint spin-$1$ carrier), Test~5 fails & Level~II; carrier identified, spin-$\tfrac{1}{2}$ target not decided by Test~4 \\
+        Tests~1--5 pass & Carrier identification complete (O27--O29): adjoint spin-$1$ \\
         \hline
       \end{tabular}
     \end{center}
 
     \begin{remark}
-      The original formulation of this table used $r_{\mathrm{eff}} = d_\rho^2$ as the
-      Level~III criterion.
-      This is corrected by Remark~\ref{rem:criterion-reform}: the Born--Infeld parity
-      constraint forces $\widetilde{M}_n \in \mathrm{Sym}(V_\rho, \mathbb{C})$, so the
-      correct target is the symmetric rank $r_{\mathrm{eff}} = d_\rho(d_\rho+1)/2$.
-      For $d_\rho = 2$: $r_{\mathrm{eff}} = 3$, established in O28~\cite{Beau2026a32}.
+      The Level~III row records carrier identification.
+      The anti-linear Born--Infeld parity makes the conjugate-pair target $d_\rho^2 = 4$ inaccessible
+      (restored only by the locking-broken control), and $r_{\mathrm{eff}} = 3$ is the invariant of the
+      irreducible adjoint (spin-$1$) carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$, established in
+      O28~\cite{Beau2026a32} and identified in O29~\cite{Beau2026a33}.
     \end{remark}
 
-    The row ``Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq d_\rho(d_\rho+1)/2$'' is
-    structurally informative even as a negative result: it identifies the correct
-    representation sector without confirming the spin-$\frac{1}{2}$ candidate,
-    pointing to a specific revision of the admissibility hierarchy argument.
+    The row ``Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 3$'' is
+    structurally informative even as a negative result: it shows the carrier is not the three-dimensional
+    adjoint, pointing to a specific revision of the admissibility hierarchy argument.
 
   \section{Implications}
   \label{sec:implications}
@@ -775,11 +772,12 @@ $\delta_{\mathrm{pair}}$ stability holds.
 
     The spin-$\frac{1}{2}$ sector emerges as a candidate not from external physical
     input, but from internal admissibility constraints~\cite{Beau2026a1}.
-    Test~4 of §\ref{sec:test4} provides a direct verification of this selection.
-    If confirmed, $\mathrm{End}(V_\rho) \simeq \mathbb{C}^{2 \times 2}$ is the
-    minimal ambient space for admissible spectral dynamics.
-    If a different fixed dimension is observed, the admissibility hierarchy must
-    be revised accordingly, but the dictionary of §\ref{sec:dictionary} remains valid.
+    Test~4 of §\ref{sec:test4} identifies the adjoint carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$
+    (spin-$1$, vector) on which the construction is based; the spin-$\tfrac{1}{2}$ selection rests on
+    minimality and is not decided by Test~4 (O29~\cite{Beau2026a33}).
+    The target space $\mathrm{End}(V_\rho) \simeq \mathbb{C}^{2 \times 2}$ is the minimal ambient space for
+    admissible spectral dynamics; a direct test of $V_\rho$ requires the independent observable identified in
+    O29, and the dictionary of §\ref{sec:dictionary} remains valid throughout.
 
   \subsection{Role of non-injectivity}
     \label{sec:impl-noninj}
@@ -807,8 +805,8 @@ $\delta_{\mathrm{pair}}$ stability holds.
     Hypothesis~\ref{hyp:embedding} is proved unconditionally (O27),
     the effective dimension $r_{\mathrm{eff}} = 3$ is established universally
     across all conjugate pairs at $q \in \{61, 101, 151\}$ (O28),
-    and the sector identification $d_\rho = 2$ (spin-$\tfrac{1}{2}$) is
-    confirmed via the symmetric rank formula $r_{\mathrm{eff}} = d_\rho(d_\rho+1)/2$ (O29).
+    and O29~\cite{Beau2026a33} identifies it as the invariant of the irreducible adjoint (spin-$1$) carrier
+    $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$.
 
     Subsequent to this paper, O27~\cite{Beau2026a31} resolved Hypothesis~\ref{hyp:embedding}
     unconditionally by proving that any morphism satisfying conditions~(a)--(c) is forced
@@ -819,22 +817,24 @@ $\delta_{\mathrm{pair}}$ stability holds.
       \text{emergence} \Rightarrow \text{non-injectivity} \Rightarrow
       \text{pair structure} \Rightarrow \text{quadratic form} \Rightarrow \mathfrak{su}(2).
     \]
-    The numerical identification of the correct irreducible sector from O25 data ---
-    the value of $d_\rho$ realised by Test~4 --- is completed in O29~\cite{Beau2026a33}.
-    The symmetric rank formula $r_{\mathrm{eff}} = d_\rho(d_\rho+1)/2$ yields
-    $d_\rho = 2$ from the observed $r_{\mathrm{eff}} = 3$, confirming the
-    spin-$\tfrac{1}{2}$ sector and closing the implication chain of O27~\cite{Beau2026a31}.
+    The numerical identification of the irreducible carrier from O25 data is completed in
+    O29~\cite{Beau2026a33}: $r_{\mathrm{eff}} = 3$ is the Veronese-collapse invariant of the adjoint
+    (spin-$1$) carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$, closing the carrier-identification chain of
+    O27~\cite{Beau2026a31}.
+    The spin-$\tfrac{1}{2}$ sector is the Schur target $V_\rho$ of $\bar\Phi : \mathfrak{su}(2) \to V_\rho$,
+    not identified by Test~4.
 
     \begin{remark}[Resolution of Test~4 in O29]
       \label{rem:test4-numerical}
       Test~4 is resolved in O29~\cite{Beau2026a33}.
-      The key structural result is that the Born--Infeld parity constraint forces the
-      outer products $\widetilde{M}_n$ into $\mathrm{Sym}(V_\rho, \mathbb{C})$
-      (see Remark~\ref{rem:criterion-reform}), so that the correct target is
-      $r_{\mathrm{eff}} = d_\rho(d_\rho+1)/2$ rather than $d_\rho^2$.
+      The anti-linear Born--Infeld parity makes the conjugate-pair target $d_\rho^2 = 4$ inaccessible
+      (restored by the locking-broken control), and $r_{\mathrm{eff}} = 3$ is the hard $6 \to 3$
+      Veronese-collapse invariant whose constraint forms span $\mathfrak{so}(3)$, identifying the irreducible
+      adjoint (spin-$1$) carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$ (see
+      Remark~\ref{rem:criterion-reform}).
       Numerically, $r_{\mathrm{eff}} = 3$ holds universally for $q \in \{61, 151\}$
-      (100\% of pairs, zero inter-pair variance) and is confirmed modally for $q = 101$
-      by a multi-sample analysis; the unique inversion gives $d_\rho = 2$ (spin-$\tfrac{1}{2}$).
+      (100\% of pairs, zero inter-pair variance) and modally for $q = 101$ by a multi-sample analysis.
+      The spin-$\tfrac{1}{2}$ sector is the Schur target $V_\rho$ and is not decided by Test~4.
     \end{remark}
 
     \bibliographystyle{plain}
