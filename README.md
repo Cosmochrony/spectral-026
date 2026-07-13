@@ -1,6 +1,6 @@
 This repository contains the source of the **O26 Cosmochrony paper**  
-[*Quadratic Completion in Admissible Spectral Pairs:
-σpair as Pullback of a Hermitian Form on the Binary-Icosahedral Thread*](out/SpectralO26.pdf).
+*Quadratic Completion in Admissible Spectral Pairs:
+σpair as Pullback of a Hermitian Form on the Binary-Icosahedral Thread*.
 
 This work extends the **spectral admissibility sub-programme** by providing
 the first **representation-theoretic interpretation of the pair observable**
