@@ -34,7 +34,7 @@ This turns σpair from a constructed observable into a candidate **intrinsic nor
 - the exponent $\delta_{\mathrm{pair}} \approx 7.44$ lies in the admissible window  
   $[7.4, 10.6]$
 - the transfer chain  
-  $c_\chi \to \delta_{\mathrm{pair}} \to \beta^*$  
+  $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}} \to \beta^*$  
   holds unconditionally (**O24**)
 - δpair is numerically stable and structurally invariant (**O25**)
 
