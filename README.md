@@ -31,12 +31,14 @@ This turns σpair from a constructed observable into a candidate **intrinsic nor
 
 - the correct observable is the canonical pair quantity  
   $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
-- the exponent $\delta_{\mathrm{pair}} \approx 7.44$ lies in the admissible window  
-  $[7.4, 10.6]$
-- the transfer chain  
-  $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}} \to \beta^*$  
-  holds unconditionally (**O24**)
-- δpair is numerically stable and structurally invariant (**O25**)
+- the reference value $\delta_{\mathrm{pair}} \approx 7.44$ lies in the historical
+  phenomenological window $[7.4, 10.6]$
+- vertical fibre structure does not change the observable rank (**O24**)
+- the pair statistic concentrates across conjugate pairs at fixed $q$ (**O25**)
+
+The further prescription $\beta^*=1/(\delta_{\mathrm{pair}}+1/2)$ is not a native
+Heisenberg growth law. It combines the fixed-degree pair observable with a changing-degree
+LPS equation and is retained only as a phenomenological comparison.
 
 However:
 

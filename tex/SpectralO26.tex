@@ -7,6 +7,7 @@
 \usepackage{geometry}
 \usepackage{doi}
 \geometry{margin=2.5cm}
+\setlength{\emergencystretch}{2em}
 
 % Theorem environments
 \newtheorem{theorem}{Theorem}[section]
@@ -28,7 +29,7 @@ via Binary-Icosahedral Representation\\[0.5em]
 \author{J\'er\^ome Beau\\
 \small Independent Researcher}
 
-\date{April 2026}
+\date{April 2026\\[2pt]\small Version 1.4.3}
 
 \begin{document}
 
@@ -59,8 +60,8 @@ via Binary-Icosahedral Representation\\[0.5em]
     trajectory in $\mathrm{End}(V_\rho)$, directly computable from O25
     data~\cite{Beau2026a28}.
     A positive result would identify $\sigma_{\mathrm{pair}}$ as the restriction of a
-    canonical Hermitian quadratic form and provide the first representation-theoretic
-    interpretation of the admissible cascade exponent $\beta^*$.
+    canonical Hermitian quadratic form and provide a representation-theoretic
+    interpretation of the pair observable itself.
     A negative result would still determine the correct ambient representation sector,
     refining the admissibility hierarchy without invalidating the dictionary.
   \end{abstract}
@@ -746,29 +747,24 @@ $\delta_{\mathrm{pair}}$ stability holds.
     $\Phi_{q,\rho}(v_c^{(n)}) \otimes \overline{\Phi_{q,\rho}(v_{q-c}^{(n)})}
     \in \mathrm{End}(V_\rho)$ endowed with its natural norm.
 
-  \subsection{Interpretation of the exponent $\beta^*$}
+  \subsection{Boundary of the $\beta^*$ interpretation}
     \label{sec:impl-beta}
 
-    The transfer chain $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}} \to \beta^*$ was
-    established in O24~\cite{Beau2026a28}, unconditionally with respect to the fibre
-    structure of~$\Pi$ (its standing conditions being the O4--O6 growth-equation closure
-    and coupling hypotheses, the Weil realisation, and the power-law regime), where
-    $\beta^*$ is defined via
+    O24~\cite{Beau2026a28} proves that vertical fibre structure does not perturb the
+    observable rank entering $\delta_{\mathrm{pair}}$.  This fibre-side theorem remains intact.
+    It does not establish the further capacity-to-rate prescription
     \begin{equation}
       \beta^* \approx \frac{1}{\delta_{\mathrm{pair}} + \tfrac{1}{2}}.
     \end{equation}
-    Under Level~III, $\delta_{\mathrm{pair}}$ characterises the growth of a
-    Hilbert--Schmidt norm along a trajectory in $\mathrm{End}(V_\rho)$, and
-    $\beta^*$ acquires a direct representation-theoretic meaning: it is the
-    effective scaling exponent of norm growth in the minimal admissible
-    non-abelian sector.
-    This interpretation is made unconditional with respect to the sector identification
-    in O27~\cite{Beau2026a31} (Corollary~6.1), where the rigidity theorem establishes
-    that this non-abelian sector is necessarily $\mathfrak{su}(2)$ and not any other
-    structure.
-    This provides a structural interpretation of the phenomenological window
-    $\beta^* \in (0.09, 0.13)$~\cite{Beau2026a28} as a constraint on admissible
-    trajectories in representation space, rather than as a purely numerical fit.
+    That expression combines the changing-degree LPS growth equation with a capacity
+    measured on the fixed-degree Heisenberg cascade; neither its square-root carrier nor
+    its Born--Infeld factor is native to the latter substrate~\cite{Beau2026sgn}.
+    Under Level~III, $\delta_{\mathrm{pair}}$ still characterises the decay of a
+    Hilbert--Schmidt trajectory in $\mathrm{End}(V_\rho)$.  O27~\cite{Beau2026a31}
+    constrains the admissible representation sector, but that sector identification does
+    not supply the missing growth equation.  Consequently the interval obtained by
+    inserting measured values into the reciprocal is retained only as a phenomenological
+    comparison; it has no derived representation-theoretic meaning for $\beta^*$.
 
   \subsection{Selection of the admissible sector}
     \label{sec:impl-sector}
