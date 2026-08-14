@@ -27,10 +27,10 @@ This turns σpair from a constructed observable into a candidate **intrinsic nor
 
 ## Context
 
-**O16–O25** established that:
+**O16–O25** provide the inputs:
 
-- the correct observable is the canonical pair quantity  
-  $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$
+- the structurally motivated candidate observable is the canonical pair quantity  
+  $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ (its fibre reading is the open bridge of O18)
 - the reference value $\delta_{\mathrm{pair}} \approx 7.44$ lies in the historical
   phenomenological window $[7.4, 10.6]$
 - vertical fibre structure does not change the observable rank (**O24**)
@@ -142,12 +142,12 @@ The derivation is fully internal:
 Born–Infeld admissibility  
 $\to$ pair observable (O16–O21)  
 $\to$ projection locking (O22)  
-$\to$ quaternionic structure (O23)  
+$\to$ conditional rank-three carrier (O23 Theorem 3.1, supplied spinor carrier)  
 $\to$ rank stability (O24)  
 $\to$ numerical validation (O25)  
 $\to$ quadratic completion (O26)
 
-No external structure is imposed.
+The carrier selection and the fibre identification (O18 Problem 2.8) are supplied hypotheses.
 
 ## Mathematical Role of O26
 
@@ -172,9 +172,9 @@ More precisely, the paper:
 ### Established input
 
 - pair observable (**O16–O21**)
-- fibre structure and normalisation (**O17–O19**)
+- conjugation identity and normalisation (**O17–O19**; fibre identification open, O18)
 - projection locking (**O22**)
-- quaternionic admissibility (**O23**)
+- conditional rank-three carrier (**O23** Theorem 3.1, supplied spinor carrier)
 - rank stability (**O24**)
 - numerical validation (**O25**)
 
@@ -213,10 +213,10 @@ Thus:
 **O26** completes the observable hierarchy:
 
 - **O16**: pair observable
-- **O17–O19**: fibre structure
+- **O17–O19**: conjugation identity and normalisation
 - **O20–O21**: persistence
 - **O22**: projection locking
-- **O23**: quaternionic structure
+- **O23**: conditional threshold dimension (supplied carrier)
 - **O24**: rank stability
 - **O25**: numerical validation
 - **O26**: quadratic completion
