@@ -29,7 +29,7 @@ via Binary-Icosahedral Representation\\[0.5em]
 \author{J\'er\^ome Beau\\
 \small Independent Researcher}
 
-\date{April 2026\\[2pt]\small Version 1.5}
+\date{2026\\[2pt]\small Version 2.0}
 
 \begin{document}
 
@@ -473,6 +473,15 @@ $\delta_{\mathrm{pair}}$ stability holds.
     Hypothesis~\ref{hyp:embedding} isolates the only non-constructive step of the
     argument: all subsequent statements are formal consequences of the constructions
     of §\ref{sec:dictionary}.
+    It remains open.
+    There is no non-zero $\mathfrak{su}(2)$-equivariant map from the adjoint
+    representation to the fundamental representation, so an equivariant adjoint-factorising
+    realisation of Hypothesis~\ref{hyp:embedding} is excluded (O27~\cite{Beau2026a31},
+    Theorem~4.1(iv)).
+    This does not exclude every quotient-factorising linear lift: the condition
+    $\ker \Pi_{\mathrm{adm}} \subseteq \ker \Phi$ gives unique linear factorisation and no
+    equivariance.
+    Hypothesis~\ref{hyp:embedding} therefore remains open in that wider class.
 
     \begin{theorem}[Level~III: canonical quadratic realisation]
       \label{thm:level3}
@@ -523,17 +532,17 @@ $\delta_{\mathrm{pair}}$ stability holds.
       exponent.
       The structural content of Theorem~\ref{thm:level3} is therefore entirely
       carried by the embedding $\Phi_{q,\rho}$.
-      Hypothesis~\ref{hyp:embedding} is resolved in O27~\cite{Beau2026a31},
-      conditionally on the supplied spinor carrier of O23:
-      the quaternionic rigidity theorem therein shows that
-      any morphism satisfying conditions~(a)--(c) necessarily factors through the
-      admissible quotient $\mathcal{H}_{\mathrm{eff}} \simeq \mathfrak{su}(2)$,
-      and that the canonical construction $\Phi_{q,\rho} = \rho \circ \iota \circ \pi$
-      is the unique such morphism up to unitary equivalence.
-      In particular, naturality~(c) is not an additional assumption but a structural
-      consequence of conditions~(a)--(b) and the Born--Infeld admissibility.
+      Hypothesis~\ref{hyp:embedding} remains open.
+      O27~\cite{Beau2026a31} exhibits, under the spinor carrier supplied conditionally by O23, the
+      canonical representation action $\rho \colon \mathfrak{su}(2) \to \mathrm{End}(V_\rho)$; the
+      corresponding intertwiner space is one-dimensional, so an intertwiner is unique only up to a
+      scalar.
+      That construction does not furnish the vector lift $\mathcal{V}_q \to V_\rho$ required here.
+      There is no non-zero $\mathfrak{su}(2)$-equivariant map from the adjoint to the fundamental,
+      so an equivariant adjoint-factorising realisation is excluded (O27, Theorem~4.1(iv)); a
+      quotient-factorising linear lift that is not equivariant is not excluded.
       Test~4 of §\ref{sec:tests} identifies the adjoint carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$
-      underlying this construction (O29~\cite{Beau2026a33}); the spin-$\tfrac{1}{2}$ sector itself is selected
+      (O29~\cite{Beau2026a33}); the spin-$\tfrac{1}{2}$ sector itself is selected
       by minimality, not by Test~4.
     \end{remark}
 
@@ -676,8 +685,9 @@ $\delta_{\mathrm{pair}}$ stability holds.
       action on $H_{\mathrm{eff}} = \mathbb{C}^3$ is irreducible.
       Test~4 thus identifies the irreducible adjoint carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$
       (spin-$1$, vector) of O27~\cite{Beau2026a31}.
-      It does not identify the spin-$\tfrac{1}{2}$ sector, which is the Schur target $V_\rho$ of
-      $\bar\Phi : \mathfrak{su}(2) \to V_\rho$ and requires an independent observable; the spin-$\tfrac{1}{2}$
+      It does not identify the spin-$\tfrac{1}{2}$ sector $V_\rho$, which is not reachable
+      equivariantly from the adjoint --- $\mathrm{Hom}_{\mathfrak{su}(2)}(\mathbf{3},\mathbf{2}) = 0$
+      --- and requires an independent observable; the spin-$\tfrac{1}{2}$
       selection rests on the minimality argument of §\ref{sec:candidate} (the minimal non-abelian admissible
       sector), not on Test~4.
     \end{remark}
@@ -808,29 +818,36 @@ $\delta_{\mathrm{pair}}$ stability holds.
     $\delta_{\mathrm{pair}}$.
     The tests of §\ref{sec:tests} can be executed on O25 data~\cite{Beau2026a29} without additional
     computation.
-    The three open questions formulated at the time of writing have since been resolved
-    by O27, O28, and O29~\cite{Beau2026a31,Beau2026a32,Beau2026a33}:
-    Hypothesis~\ref{hyp:embedding} is proved unconditionally (O27),
+    Of the three open questions formulated at the time of writing, two are settled:
     the effective dimension $r_{\mathrm{eff}} = 3$ is established universally
-    across all conjugate pairs at $q \in \{61, 101, 151\}$ (O28),
+    across all conjugate pairs at $q \in \{61, 101, 151\}$ (O28~\cite{Beau2026a32}),
     and O29~\cite{Beau2026a33} identifies it as the invariant of the irreducible adjoint (spin-$1$) carrier
     $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$.
+    Hypothesis~\ref{hyp:embedding} remains open.
 
-    Subsequent to this paper, O27~\cite{Beau2026a31} resolved Hypothesis~\ref{hyp:embedding}
-    unconditionally by proving that any morphism satisfying conditions~(a)--(c) is forced
-    to factor through $\mathfrak{su}(2)$, with canonical construction
-    $\Phi_{q,\rho} = \rho \circ \iota \circ \pi$ unique up to unitary equivalence.
-    The full implication chain is thereby closed at the structural level:
+    O27~\cite{Beau2026a31} exhibits the canonical representation action
+    $\rho \colon \mathfrak{su}(2) \to \mathrm{End}(V_\rho)$ under the carrier supplied
+    conditionally by O23.
+    There is no non-zero $\mathfrak{su}(2)$-equivariant map from the adjoint
+    representation to the fundamental representation, so an equivariant adjoint-factorising
+    realisation of Hypothesis~\ref{hyp:embedding} is excluded (O27~\cite{Beau2026a31},
+    Theorem~4.1(iv)).
+    This does not exclude every quotient-factorising linear lift: the condition
+    $\ker \Pi_{\mathrm{adm}} \subseteq \ker \Phi$ gives unique linear factorisation and no
+    equivariance.
+    Hypothesis~\ref{hyp:embedding} therefore remains open in that wider class.
+    The implication chain
     \[
       \text{emergence} \Rightarrow \text{non-injectivity} \Rightarrow
-      \text{pair structure} \Rightarrow \text{quadratic form} \Rightarrow \mathfrak{su}(2).
+      \text{pair structure} \Rightarrow \text{quadratic form} \Rightarrow \mathfrak{su}(2)
     \]
+    has arrows of unequal type; its last step is the carrier supplied conditionally by O23, not a
+    consequence of the three constraints.
     The numerical identification of the irreducible carrier from O25 data is completed in
     O29~\cite{Beau2026a33}: $r_{\mathrm{eff}} = 3$ is the Veronese-collapse invariant of the adjoint
-    (spin-$1$) carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$, closing the carrier-identification chain of
-    O27~\cite{Beau2026a31}.
-    The spin-$\tfrac{1}{2}$ sector is the Schur target $V_\rho$ of $\bar\Phi : \mathfrak{su}(2) \to V_\rho$,
-    not identified by Test~4.
+    (spin-$1$) carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$.
+    The spin-$\tfrac{1}{2}$ sector $V_\rho$ is not identified by Test~4, and it is not reachable
+    equivariantly from the adjoint.
 
     \begin{remark}[Resolution of Test~4 in O29]
       \label{rem:test4-numerical}
@@ -842,7 +859,7 @@ $\delta_{\mathrm{pair}}$ stability holds.
       Remark~\ref{rem:criterion-reform}).
       Numerically, $r_{\mathrm{eff}} = 3$ holds universally for $q \in \{61, 151\}$
       (100\% of pairs, zero inter-pair variance) and modally for $q = 101$ by a multi-sample analysis.
-      The spin-$\tfrac{1}{2}$ sector is the Schur target $V_\rho$ and is not decided by Test~4.
+      The spin-$\tfrac{1}{2}$ sector $V_\rho$ is not decided by Test~4.
     \end{remark}
 
     \bibliographystyle{plain}
