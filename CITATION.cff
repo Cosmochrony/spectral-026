@@ -1,18 +1,18 @@
 cff-version: 1.2.0
 message: "If you cite this work, please use the metadata from this file."
-title: "Quadratic Completion of Admissible Spectral Pairs via Binary-Icosahedral Representation O26 — Spectral Admissibility Sub-programme"
-type: software
+title: "Quadratic Completion of Admissible Spectral Pairs via Binary-Icosahedral Representation — O26, Spectral Admissibility Sub-programme"
+type: article
 authors:
   - family-names: "Beau"
     given-names: "Jérôme"
 repository-code: "https://github.com/Cosmochrony/spectral-026"
 url: "https://cosmochrony.org/science/spectral/program/o26/"
-version: "1.5"
+version: "2.0"
 doi: "10.5281/zenodo.19488845"
 license: "CC-BY-4.0"
 preferred-citation:
   type: article
-  title: "Quadratic Completion of Admissible Spectral Pairs via Binary-Icosahedral Representation O26 — Spectral Admissibility Sub-programme"
+  title: "Quadratic Completion of Admissible Spectral Pairs via Binary-Icosahedral Representation"
   authors:
     - family-names: "Beau"
       given-names: "Jérôme"
