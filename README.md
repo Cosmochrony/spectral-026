@@ -69,7 +69,7 @@ Three levels of identification are introduced:
 *Result.* Each conjugate pair {c, q−c} defines a rank-one operator:
 
 $$
-\widetilde{M}_n = v_c^{(n)} \otimes v_{q-c}^{(n)}
+\widetilde{M}_n = v_c^{(n)} \otimes \overline{v_{q-c}^{(n)}}
 $$
 
 with:
@@ -120,11 +120,17 @@ Thus:
 Candidate:
 
 - spin-$\tfrac{1}{2}$ sector (dimension 2)
-- $\dim \mathrm{End}(V_\rho) = 4$
+- ambient space $\mathrm{End}(V_\rho)$, of dimension 4
+
+*Proposition (symmetric-square bound).* Under the involution-equivariance condition
+$\Phi(v_{q-c}^{(n)}) = \overline{\Phi(v_c^{(n)})}$ of the embedding, each Level III product is
+$u u^{\mathsf T}$ with $u = \Phi(v_c^{(n)})$, so the trajectory spans at most
+$\mathrm{Sym}^2(V_\rho)$, of dimension 3 when $\dim_{\mathbb C} V_\rho = 2$. The rank-four target is
+excluded under that contract; other embeddings and constructions are not refuted.
 
 ### 5. Falsifiability via effective dimension
 
-*Result.* The conjecture is testable via:
+*Result.* The paper states diagnostics based on:
 
 - covariance rank of $\widetilde{M}_n$
 - universality across pairs
@@ -132,11 +138,14 @@ Candidate:
 
 Thus:
 
-- the covariance rank tests a property of the measured carrier \(H_{\mathrm{eff}}\), not of
-  \(V_\rho\): O29 finds the tested conjugate-pair samples below the target
-  \(d_\rho^2 = 4\), with a modal rank three compatible with the supplied adjoint carrier
-  and no carrier identification
-- a direct test of \(V_\rho\) requires an independent observable
+- involution compatibility of $\widetilde{M}_n$ holds by construction and is not a discriminating test
+- the conjugate-pair covariance computable from O25 data is formed in the measured carrier
+  $H_{\mathrm{eff}}$, not in $\mathrm{End}(V_\rho)$: O29 finds the tested samples below rank four, with a modal
+  rank three compatible with the adjoint carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$, itself conditional on
+  O23's supplied carrier and O27's admissible-saturation hypothesis, and no carrier identification
+- under the embedding's involution-equivariance condition the rank-four target is excluded
+  (symmetric-square bound above)
+- a representation-selection test of $V_\rho$ remains open: it requires an independent observable
 
 ## Foundational Chain from the Substrate
 
@@ -160,7 +169,7 @@ The carrier selection and the fibre identification (O18 Problem 2.8) are supplie
 - links it to Hilbert–Schmidt geometry
 - introduces a representation-theoretic embedding
 - formulates a hierarchy of identification levels
-- provides falsifiability criteria
+- provides diagnostic criteria and states their scope
 
 More precisely, the paper:
 
@@ -168,7 +177,7 @@ More precisely, the paper:
 - proves exponent equivalence (Level I)
 - isolates normalisation freedom (Level II)
 - proposes a canonical embedding (Level III)
-- defines tests for representation selection
+- defines rank diagnostics and bounds what they can decide
 
 ## Epistemic Structure of the Paper
 
@@ -188,7 +197,7 @@ More precisely, the paper:
 - Level I proof
 - Level II structural equivalence
 - Level III conjecture
-- falsifiability framework
+- diagnostic criteria, with the symmetric-square bound on the Level III rank target
 
 ### Remaining open problems
 
@@ -236,7 +245,7 @@ Thus:
 - dictionary with matrix coefficients
 - Hilbert–Schmidt framework
 - representation-theoretic embedding
-- falsifiability of the sector
+- diagnostics of the measured carrier and a bound on the Level III rank target
 - bridge between spectral data and representation theory
 
 ## Outcome
@@ -262,8 +271,9 @@ Identify the correct irrep ρ of 2I.
 
 ### Level III validation
 
-Construct an observable that measures \(\mathrm{End}(V_\rho)\) directly; the conjugate-pair
-covariance of Test 4 measures the carrier \(H_{\mathrm{eff}}\) instead (O29).
+Construct an observable that measures $\mathrm{End}(V_\rho)$ directly; the conjugate-pair
+covariance of Test 4 measures the carrier $H_{\mathrm{eff}}$ instead (O29), and under the embedding's
+involution-equivariance condition a rank-four target is excluded.
 
 ### Embedding
 

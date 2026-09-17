@@ -49,9 +49,9 @@ via Binary-Icosahedral Representation\\[0.5em]
     $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$.
     Building on the canonical construction of conjugate pairs under the parity
     involution $c \leftrightarrow q-c$, the candidate fibre structure of the pair
-    sector (a structurally motivated hypothesis; O18~\cite{Beau2026a22} states the
+    sector (a structurally motivated hypothesis; O18 states the
     fibre identification as an open problem), and the normalisation invariance
-    established in O17--O19~\cite{Beau2026a21,Beau2026a22,Beau2026a23},
+    established in O17--O19,
     we construct an explicit dictionary between conjugate Weil blocks and rank-one
     matrix coefficients in a representation space.
 
@@ -65,14 +65,14 @@ via Binary-Icosahedral Representation\\[0.5em]
     $\Phi_{q,\rho}$) in an isotypic sector of the binary icosahedral group $2I$
     along the admissibility thread $Q_8 \subset 2I \subset \mathrm{SU}(2)$.
 
-    We provide concrete falsifiability tests based on the effective dimension of the
-    trajectory in $\mathrm{End}(V_\rho)$, directly computable from O25
-    data~\cite{Beau2026a29}.
-    A positive result would identify $\sigma_{\mathrm{pair}}$ as the restriction of a
-    canonical Hermitian quadratic form and provide a representation-theoretic
-    interpretation of the pair observable itself.
-    A negative result would still determine the correct ambient representation sector,
-    refining the admissibility hierarchy without invalidating the dictionary.
+    Under the involution-equivariance condition of that embedding, every Level~III outer
+    product is a symmetric square $uu^{\mathsf T}$, so the trajectory spans at most
+    $\mathrm{Sym}^2(V_\rho)$, of dimension $3$ when $\dim_{\mathbb{C}} V_\rho = 2$: the
+    rank-four target in $\mathrm{End}(V_\rho)$ is excluded under that contract, without
+    refuting other embeddings or constructions.
+    The conjugate-pair covariance computable from O25 data is formed in the measured carrier
+    $H_{\mathrm{eff}}$ rather than in $\mathrm{End}(V_\rho)$; it yields finite-data diagnostics
+    compatible with a supplied adjoint carrier and does not identify a representation sector.
   \end{abstract}
 
   \paragraph{Keywords.}
@@ -298,16 +298,18 @@ via Binary-Icosahedral Representation\\[0.5em]
       \begin{enumerate}[label=(\roman*)]
 
 \item \textbf{Involution compatibility.}
-The parity involution $c \leftrightarrow q-c$ corresponds, via the conjugation
-identity $\rho_{q-c} = \overline{\rho_c}$, to complex conjugation
-$v \mapsto \overline{v}$ on the representation space.
-This is precisely the anti-linear involution that exchanges
-$u \otimes \overline{v}$ and $v \otimes \overline{u}$ in $\mathrm{End}(V_\rho)$,
-i.e.\ Hermitian adjunction $A \mapsto A^\dagger$.
+The exchange $c \leftrightarrow q-c$ maps $\widetilde{M}_n$ to its Hermitian adjoint identically:
+by~\eqref{eq:Mn-unnorm}, $(v_c^{(n)} \otimes \overline{v_{q-c}^{(n)}})^\dagger
+= v_{q-c}^{(n)} \otimes \overline{v_c^{(n)}}$ for any vectors.
 The pair observable $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n) =
 \sigma_c(n)\,\sigma_{q-c}(n)$ is symmetric under this exchange, consistent
 with $\|A\|_{\mathrm{HS}}^2 = \|A^\dagger\|_{\mathrm{HS}}^2$.
-Involution compatibility holds.
+Involution compatibility therefore holds by construction.
+It does not use the conjugation identity $\rho_{q-c} = \overline{\rho_c}$, whose scalar content is
+$\delta_{q-c} = \delta_c$~\cite{Beau2026a21}, and it does not imply an anti-linear relation between
+the coordinates of conjugate blocks: that relation is condition~(a) of
+Hypothesis~\ref{hyp:embedding} for the embedded vectors, and its analogue on measured coordinates is
+tested in O29~\cite{Beau2026a33}, which finds it satisfied only approximately.
 
 \item \textbf{Gauge invariance.}
 The observable $\sigma^{\mathrm{can}}_{\mathrm{pair}}(n)$ is invariant under
@@ -550,9 +552,9 @@ $\delta_{\mathrm{pair}}$ stability holds.
       quotient-factorising linear lift that is not equivariant is not excluded.
       Test~4 of §\ref{sec:tests} measures a property of the carrier $H_{\mathrm{eff}}$, not of $V_\rho$:
       O29~\cite{Beau2026a33} finds finite-data diagnostics compatible with the adjoint carrier
-      $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$ conditional on O23's supplied carrier and O27's admissible-saturation
-      hypothesis, without
-      identifying that carrier; the spin-$\tfrac{1}{2}$ sector itself is selected by minimality, not by
+      $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$, without identifying that carrier, which is itself
+      conditional (O27) on O23's supplied carrier and O27's admissible-saturation hypothesis; the spin-$\tfrac{1}{2}$
+      sector itself is selected by minimality, not by
       Test~4.
     \end{remark}
 
@@ -565,8 +567,44 @@ $\delta_{\mathrm{pair}}$ stability holds.
     Under Hypothesis~\ref{hyp:embedding}, the proportionality constant in
     Theorem~\ref{thm:level3} is $d_\rho^{-2} = \tfrac{1}{4}$, and
     $\Phi_{q,\rho}(v_c^{(n)}) \otimes \overline{\Phi_{q,\rho}(v_{q-c}^{(n)})}$
-    takes values in the $4$-dimensional space
-    $\mathrm{End}(V_\rho) \simeq \mathbb{C}^{2 \times 2}$.
+    takes values in $\mathrm{End}(V_\rho) \simeq \mathbb{C}^{2 \times 2}$.
+    Condition~(a) confines these values to a proper subspace.
+
+    \begin{proposition}[Symmetric-square bound under involution equivariance]
+      \label{prop:sym-bound}
+      Assume condition~(a) of Hypothesis~\ref{hyp:embedding}, with the conjugation
+      in~\eqref{eq:hyp-involution} taken in a fixed basis of $V_\rho$, and let
+      $d = \dim_{\mathbb{C}} V_\rho$.
+      Then for every shell $n$ the Level~III outer product is the symmetric square
+      \[
+        \Phi_{q,\rho}(v_c^{(n)}) \otimes \overline{\Phi_{q,\rho}(v_{q-c}^{(n)})} = u\,u^{\mathsf T},
+        \qquad u := \Phi_{q,\rho}(v_c^{(n)}),
+      \]
+      so the trajectory spans a subspace of $\mathrm{Sym}^2(V_\rho)$, the complex symmetric
+      $d \times d$ matrices, of dimension $d(d+1)/2$.
+      The covariance~\eqref{eq:covariance} built from these products has rank at most
+      $d(d+1)/2$.
+      For $d = 2$ this bound is $3$, and the rank-four target $d_\rho^2 = 4$ is excluded.
+    \end{proposition}
+
+    \begin{proof}
+      By condition~(a), $w := \Phi_{q,\rho}(v_{q-c}^{(n)}) = \overline{u}$, hence $\overline{w} = u$.
+      The matrix of $u \otimes \overline{w}$ has entries $u_a \overline{w_b} = u_a u_b$, which are
+      symmetric in $a, b$; thus $u \otimes \overline{w} = u\,u^{\mathsf T} \in \mathrm{Sym}^2(V_\rho)$.
+      The complex symmetric $d \times d$ matrices form a space of dimension $d(d+1)/2$.
+      The range of $\mathcal{C}_c = N^{-1}\sum_n \mathrm{vec}(\widetilde{M}_n)\,
+      \mathrm{vec}(\widetilde{M}_n)^\dagger$ is contained in the span of the vectors
+      $\mathrm{vec}(\widetilde{M}_n)$, hence in $\mathrm{vec}(\mathrm{Sym}^2(V_\rho))$.
+      Since $d(d+1)/2 < d^2$ for $d \geq 2$, the value $d^2$ cannot be attained.
+    \end{proof}
+
+    Proposition~\ref{prop:sym-bound} is a statement about the contract of
+    Hypothesis~\ref{hyp:embedding} as written.
+    It does not refute an embedding without condition~(a), an embedding carrying a different
+    anti-linear involution, or another construction of the pair trajectory, and it does not
+    decide whether Hypothesis~\ref{hyp:embedding} holds.
+    It fixes what a Level~III rank test can decide under that contract: the target $d_\rho^2 = 4$
+    of the original Test~4 criterion (§\ref{sec:test4}) is not attainable there, for any data.
 
   \subsection{Structural interpretation}
     \label{sec:interpretation}
@@ -576,17 +614,22 @@ $\delta_{\mathrm{pair}}$ stability holds.
     At Level~II, $\sigma_{\mathrm{pair}}$ is the Hilbert--Schmidt norm up to a
     normalisation: the identification is structural modulo convention.
     At Level~III, $\sigma_{\mathrm{pair}}$ \emph{is} the Hilbert--Schmidt norm squared
-    of a rank-one element of $\mathrm{End}(V_\rho)$, with the normalisation fixed by
+    of a rank-one element of $\mathrm{End}(V_\rho)$, symmetric by
+    Proposition~\ref{prop:sym-bound}, with the normalisation fixed by
     representation theory: this is a theorem under Hypothesis~\ref{hyp:embedding},
     not a conjecture.
 
-  \section{Discriminating criteria and falsifiability}
+  \section{Diagnostic criteria and their scope}
   \label{sec:tests}
 
-  The identification proposed in §\ref{sec:conjecture} leads to concrete,
-  computable tests distinguishing the three levels.
-  All tests require no modification of the O25 pipeline and can be evaluated
-  directly from the stored Gram--Schmidt data.
+  The identification proposed in §\ref{sec:conjecture} leads to computable diagnostics.
+  They require no modification of the O25 pipeline and can be evaluated from the stored
+  Gram--Schmidt data.
+  Tests~1 and~2 hold by construction and check the implementation.
+  The conjugate-pair covariance of Test~4 computable from these data is formed in the measured
+  carrier $H_{\mathrm{eff}}$ rather than in $\mathrm{End}(V_\rho)$
+  (Remark~\ref{rem:criterion-reform}), and under condition~(a) of Hypothesis~\ref{hyp:embedding} its
+  Level~III target is bounded by Proposition~\ref{prop:sym-bound}.
 
   \subsection{Test 1: Involution compatibility}
     \label{sec:test1}
@@ -594,9 +637,9 @@ $\delta_{\mathrm{pair}}$ stability holds.
     At the scalar level, the conjugation identity $\rho_{q-c} = \overline{\rho_c}$
     implies $\delta_{q-c} = \delta_c$~\cite{Beau2026a21}.
     At the matrix level, the dictionary maps $c \leftrightarrow q-c$ to
-    $\widetilde{M}_n \leftrightarrow \widetilde{M}_n^\dagger$ in $\mathrm{End}(V_\rho)$.
-    This is an independent empirical prediction: if the identification is structural,
-    the Frobenius distance
+    $\widetilde{M}_n \leftrightarrow \widetilde{M}_n^\dagger$ identically, for any vectors
+    (criterion~(i) of §\ref{sec:dict-map}).
+    The Frobenius distance
     \begin{equation}
       \Delta_n(c) := \bigl\|\widetilde{M}_n(c)^\dagger
       - \widetilde{M}_n(q-c)\bigr\|_{\mathrm{HS}}
@@ -608,9 +651,12 @@ $\delta_{\mathrm{pair}}$ stability holds.
   $\Delta_n(c) < \varepsilon_{\mathrm{mach}}$ for all tested pairs and shells.
     \end{criterion}
 
-    A non-zero $\Delta_n(c)$ that is nonetheless small would indicate that the
-    identification holds only approximately, corresponding to Level~II.
-    A systematic non-zero value would falsify Levels~II and~III simultaneously.
+    Since $\Delta_n(c)$ vanishes by construction, Test~1 is a consistency check on the
+    implementation, like Test~2: a non-zero value signals a computational error and does not
+    discriminate Levels~II and~III.
+    The discriminating content of involution compatibility is condition~(a) of
+    Hypothesis~\ref{hyp:embedding}, which concerns the embedded vectors and is not testable from
+    the Weil-side vectors alone.
 
   \subsection{Test 2: Gauge invariance}
     \label{sec:test2}
@@ -654,7 +700,8 @@ $\delta_{\mathrm{pair}}$ stability holds.
   \subsection{Test 4: Effective dimension of the trajectory}
     \label{sec:test4}
 
-    This is the central falsifiability test for Level~III.
+    This test is stated below in its original form; Proposition~\ref{prop:sym-bound} and
+    Remark~\ref{rem:criterion-reform} fix what it can decide.
     For each conjugate pair $\{c, q-c\}$, construct the empirical covariance operator
     \begin{equation}
       \mathcal{C}_c = \frac{1}{N} \sum_{n=n_0}^{n_1}
@@ -678,6 +725,8 @@ $\delta_{\mathrm{pair}}$ stability holds.
     \item If $r_{\mathrm{eff}}$ varies across pairs or primes: Level~III fails;
     the identification holds at most at Level~II.
   \end{itemize}
+  Under condition~(a) of Hypothesis~\ref{hyp:embedding}, neither of the first two outcomes can
+  occur: Proposition~\ref{prop:sym-bound} bounds $r_{\mathrm{eff}}$ by $d_\rho(d_\rho+1)/2 < d_\rho^2$.
   This criterion is reinterpreted in Remark~\ref{rem:criterion-reform} below,
   following O29~\cite{Beau2026a33}: the conjugate-pair covariance is formed in $\mathrm{End}(H_{\mathrm{eff}})$
   rather than $\mathrm{End}(V_\rho)$, the tested samples do not reach $d_\rho^2 = 4$, and the modal value
@@ -692,12 +741,17 @@ $\delta_{\mathrm{pair}}$ stability holds.
       Under the additional projected-coordinate relation $\pi_{q-c}(v) = \overline{\pi_c(v)}$, which
       O29~\cite{Beau2026a33} tests and finds satisfied only approximately by the stored data, every
       outer product is complex symmetric.
-      That algebraic restriction alone does not exclude rank $4$; the non-attainment of
+      That algebraic restriction alone does not exclude rank $4$ inside the six-dimensional space
+      $\mathrm{Sym}(H_{\mathrm{eff}}, \mathbb{C})$; the non-attainment of
       $d_\rho^2 = 4$ is a result of the tested finite samples, and breaking the per-vector locking
       recovers four operator directions only in an auxiliary two-dimensional PCA truncation, not in
       $\mathrm{End}(V_\rho)$.
+      Under condition~(a) of Hypothesis~\ref{hyp:embedding}, by contrast, the rank-four target in
+      $\mathrm{End}(V_\rho)$ is excluded for any data (Proposition~\ref{prop:sym-bound}); the O29
+      samples, formed in $H_{\mathrm{eff}}$, do not bear on that bound.
       At the checkpoints examined in O29, $r_{\mathrm{eff}} = 3$ is the modal numerical value in
-      $\mathrm{End}(H_{\mathrm{eff}})$, not an invariant; the symmetric squares show a numerical $6 \to 3$
+      $\mathrm{End}(H_{\mathrm{eff}})$, not an invariant; at $q \in \{29, 61\}$ the symmetric squares show a
+      numerical $6 \to 3$
       Veronese collapse, and the fitted constraint forms have commutators of numerical rank three in a
       chosen $\mathfrak{so}(3)$ basis with a one-dimensional computed commutant.
       These diagnostics are compatible with the adjoint carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$
@@ -748,30 +802,39 @@ $\delta_{\mathrm{pair}}$ stability holds.
         \hline
         Tests~1--3 fail & Dictionary fails; §\ref{sec:dictionary} must be revised \\
         Tests~1--3 pass, $r_{\mathrm{eff}}$ variable & Level~I only \\
-        Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 3$ & inconsistent with the supplied three-dimensional adjoint
-        reading; revise the candidate \\
+        Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 3$ & not the modal value observed in
+        $\mathrm{End}(H_{\mathrm{eff}})$; a bare
+        effective rank does not by itself bear on the carrier (O29) \\
         Tests~1--3 pass, $r_{\mathrm{eff}} = 3$ (compatible with the supplied adjoint spin-$1$ carrier), Test~5 fails
         & Level~II; carrier not identified, spin-$\tfrac{1}{2}$ target not decided by Test~4 \\
-        Tests~1--5 pass & Finite-data evidence compatible with the supplied adjoint spin-$1$ carrier (O27--O29); no
+        Tests~1--5 pass & Finite-data evidence compatible with the supplied adjoint spin-$1$ carrier (rank data of
+        O28--O29); no
         carrier identification \\
         \hline
       \end{tabular}
     \end{center}
 
     \begin{remark}
-      The Level~III row records finite-data compatibility with a supplied carrier, not a carrier
-      identification.
+      The last row records finite-data compatibility with a supplied carrier, not a carrier
+      identification, and no row can support Level~III through $r_{\mathrm{eff}} = d_\rho^2$ under
+      condition~(a) of Hypothesis~\ref{hyp:embedding} (Proposition~\ref{prop:sym-bound}).
+      Test~1 holds by construction and does not discriminate between rows.
       The tested conjugate-pair samples do not reach $d_\rho^2 = 4$, and the locking-broken control
       recovers four operator directions only in an auxiliary PCA truncation.
       The value $r_{\mathrm{eff}} = 3$ was reported by O28~\cite{Beau2026a32} across the pairs of its
       perimeter; in the extended recomputation of O29~\cite{Beau2026a33} it is modal, not invariant, and
       compatible with the adjoint (spin-$1$) carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$ conditional on O23's
       supplied carrier and O27's admissible-saturation hypothesis, which the data do not identify.
+      Because $r_{\mathrm{eff}}$ varies across pairs at $q = 101$ and $q = 211$, those data fall, for
+      Test~4, in the row ``$r_{\mathrm{eff}}$ variable''; since they are formed in
+      $\mathrm{End}(H_{\mathrm{eff}})$ rather than $\mathrm{End}(V_\rho)$, they decide no row of the table
+      for Level~III.
     \end{remark}
 
     The row ``Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 3$'' is
-    structurally informative even as a negative result: it would be inconsistent with the supplied
-    three-dimensional adjoint reading, pointing to a specific revision of the admissibility hierarchy argument.
+    not decisive: a bare effective rank does not fix a representation dimension, and
+    O29~\cite{Beau2026a33} records ranks four to nine at $q = 101$ and five at $q = 211$ on the same carrier,
+    with modal rank three in multi-sample follow-ups.
 
   \section{Implications}
   \label{sec:implications}
@@ -786,7 +849,8 @@ $\delta_{\mathrm{pair}}$ stability holds.
     The emergence of the pair observable is a \emph{quadratic completion}: the passage
     from a linear object $v_c^{(n)} \in V_\rho$ to a rank-one operator
     $\Phi_{q,\rho}(v_c^{(n)}) \otimes \overline{\Phi_{q,\rho}(v_{q-c}^{(n)})}
-    \in \mathrm{End}(V_\rho)$ endowed with its natural norm.
+    \in \mathrm{End}(V_\rho)$ endowed with its natural norm, which lies in $\mathrm{Sym}^2(V_\rho)$ by
+    Proposition~\ref{prop:sym-bound}.
 
   \subsection{Boundary of the $\beta^*$ interpretation}
     \label{sec:impl-beta}
@@ -802,7 +866,7 @@ $\delta_{\mathrm{pair}}$ stability holds.
     its Born--Infeld factor is native to the latter substrate~\cite{Beau2026sgn}.
     Under Level~III, $\delta_{\mathrm{pair}}$ still characterises the decay of a
     Hilbert--Schmidt trajectory in $\mathrm{End}(V_\rho)$.  O27~\cite{Beau2026a31}
-    constrains the admissible representation sector, but that sector identification does
+    constrains the admissible representation sector, but that conditional sector reading does
     not supply the missing growth equation.  Consequently the interval obtained by
     inserting measured values into the reciprocal is retained only as a phenomenological
     comparison; it has no derived representation-theoretic meaning for $\beta^*$.
@@ -818,9 +882,8 @@ $\delta_{\mathrm{pair}}$ stability holds.
     without identifying it; the spin-$\tfrac{1}{2}$ selection rests on minimality and is not decided by
     Test~4 (O29~\cite{Beau2026a33}).
     The target space $\mathrm{End}(V_\rho) \simeq \mathbb{C}^{2 \times 2}$ is the minimal ambient space for
-    admissible spectral dynamics; a direct test of $V_\rho$ requires an independent observable, built from
-    independently sampled vectors as characterised in O29, and the dictionary of §\ref{sec:dictionary}
-    remains valid throughout.
+    admissible spectral dynamics; a direct test of $V_\rho$ requires an independent observable and a typed bridge to
+    $V_\rho$, both left open in O29, and the dictionary of §\ref{sec:dictionary} remains valid throughout.
 
   \subsection{Role of non-injectivity}
     \label{sec:impl-noninj}
@@ -873,18 +936,22 @@ $\delta_{\mathrm{pair}}$ stability holds.
     \]
     has arrows of unequal type; its last step is the carrier supplied conditionally by O23, not a
     consequence of the three constraints.
-    No carrier is identified numerically from O25 data: O29~\cite{Beau2026a33} finds a numerical
-    $6 \to 3$ Veronese collapse and finite-precision constraint diagnostics compatible with the supplied
+    No carrier is identified numerically from O25 data: at $q \in \{29, 61\}$, O29~\cite{Beau2026a33} finds a
+    numerical $6 \to 3$ Veronese collapse and finite-precision constraint diagnostics compatible with the supplied
     adjoint (spin-$1$) carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$, and does not derive that carrier
     or prove exact irreducibility.
     The spin-$\tfrac{1}{2}$ sector $V_\rho$ is not identified by Test~4, and it is not reachable
     equivariantly from the adjoint.
+    Under condition~(a) of Hypothesis~\ref{hyp:embedding}, any Level~III rank test is bounded by
+    Proposition~\ref{prop:sym-bound}: the trajectory spans at most $\mathrm{Sym}^2(V_\rho)$, and the
+    rank-four target is excluded under that contract.
 
     \begin{remark}[Test~4 in O29]
       \label{rem:test4-numerical}
       O29~\cite{Beau2026a33} reformulates Test~4 as a finite-data carrier diagnostic.
       The tested conjugate-pair samples do not reach $d_\rho^2 = 4$, and the numerical $6 \to 3$
-      Veronese collapse and $\mathfrak{so}(3)$ constraint pattern are compatible with the supplied adjoint
+      Veronese collapse and $\mathfrak{so}(3)$ constraint pattern found at $q \in \{29, 61\}$ are compatible with the
+      supplied adjoint
       (spin-$1$) carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$ without identifying it (see
       Remark~\ref{rem:criterion-reform}).
       Numerically, $r_{\mathrm{eff}} = 3$ holds for every tested pair at $q \in \{29, 61, 151\}$
