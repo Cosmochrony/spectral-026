@@ -586,7 +586,7 @@ $\delta_{\mathrm{pair}}$ stability holds.
       $\mathcal{C}^{\Phi}_c := N^{-1}\sum_n \mathrm{vec}(\widehat{M}_n)\,\mathrm{vec}(\widehat{M}_n)^\dagger$
       of the embedded products
       $\widehat{M}_n := \Phi_{q,\rho}(v_c^{(n)}) \otimes \overline{\Phi_{q,\rho}(v_{q-c}^{(n)})}$,
-      formed as in~\eqref{eq:covariance}, has rank at most $d(d+1)/2$.
+      formed as in~\eqref{eq:covariance}, has rank $r^{\Phi}_{\mathrm{eff}} \leq d(d+1)/2$.
       For $d = 2$ this bound is $3$, and the rank-four target $d_\rho^2 = 4$ is excluded.
     \end{proposition}
 
@@ -629,8 +629,9 @@ $\delta_{\mathrm{pair}}$ stability holds.
   \label{sec:tests}
 
   The identification proposed in §\ref{sec:conjecture} leads to computable diagnostics.
-  They require no modification of the O25 pipeline and can be evaluated from the stored
-  Gram--Schmidt data.
+  Tests~1--3, and the form of Test~4 in the measured carrier, can be evaluated from the stored
+  Gram--Schmidt data without modifying the O25 pipeline; the Level~III forms of Tests~4 and~5 require
+  the embedding $\Phi_{q,\rho}$, which Hypothesis~\ref{hyp:embedding} leaves open.
   Tests~1 and~2 hold by construction and check the implementation.
   The conjugate-pair covariance of Test~4 computable from these data is formed in the measured
   carrier $H_{\mathrm{eff}}$ rather than in $\mathrm{End}(V_\rho)$
@@ -731,8 +732,10 @@ $\delta_{\mathrm{pair}}$ stability holds.
     \item If $r_{\mathrm{eff}}$ varies across pairs or primes: Level~III fails;
     the identification holds at most at Level~II.
   \end{itemize}
+  Read at Level~III, the criterion concerns the covariance $\mathcal{C}^{\Phi}_c$ of the embedded products
+  and its rank $r^{\Phi}_{\mathrm{eff}}$ (Proposition~\ref{prop:sym-bound}).
   Under condition~(a) of Hypothesis~\ref{hyp:embedding} and for $d_\rho \geq 2$, neither of the first two
-  outcomes can occur: Proposition~\ref{prop:sym-bound} bounds $r_{\mathrm{eff}}$ by
+  outcomes can occur for that rank: Proposition~\ref{prop:sym-bound} bounds $r^{\Phi}_{\mathrm{eff}}$ by
   $d_\rho(d_\rho+1)/2 < d_\rho^2$.
   This criterion is reinterpreted in Remark~\ref{rem:criterion-reform} below,
   following O29~\cite{Beau2026a33}: the conjugate-pair covariance is formed in $\mathrm{End}(H_{\mathrm{eff}})$
@@ -809,43 +812,38 @@ $\delta_{\mathrm{pair}}$ stability holds.
         \hline
         Test~1 or Test~2 fails & Implementation error: both hold by construction \\
         Test~3 fails & Dictionary fails; §\ref{sec:dictionary} must be revised \\
-        Tests~1--3 pass, $r_{\mathrm{eff}}$ variable & Level~III fails; at most Level~II \\
-        Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 3$ & not the modal value observed in
-        $\mathrm{End}(H_{\mathrm{eff}})$; a bare
-        effective rank does not by itself bear on the carrier (O29) \\
-        Tests~1--3 pass, $r_{\mathrm{eff}} = 3$ (compatible with the supplied adjoint spin-$1$ carrier, and equal to
-        the Level~III bound under condition~(a), hence not discriminating), Test~5 fails
-        & Level~II; carrier not identified, spin-$\tfrac{1}{2}$ target not decided by Test~4 \\
-        Tests~1--5 pass & Finite-data evidence compatible with the supplied adjoint spin-$1$ carrier (rank data of
-        O28--O29); no
-        carrier identification \\
+        Tests~1--3 pass, $r^{\Phi}_{\mathrm{eff}}$ varies across pairs or primes & Level~III fails; at most
+        Level~II (original criterion) \\
+        Tests~1--3 pass, $r^{\Phi}_{\mathrm{eff}}$ fixed, Test~5 fails & Level~II; Level~III not supported \\
+        Tests~1--5 pass, $r^{\Phi}_{\mathrm{eff}}$ fixed & Consistent with Level~III; under condition~(a) the
+        fixed value is at most $d_\rho(d_\rho+1)/2$ ($3$ for $d_\rho = 2$), so it cannot equal $d_\rho^2$
+        and does not by itself fix $d_\rho$ \\
         \hline
       \end{tabular}
     \end{center}
 
     \begin{remark}
-      The last row records finite-data compatibility with a supplied carrier, not a carrier
-      identification, and no row can support Level~III through $r_{\mathrm{eff}} = d_\rho^2$ under
-      condition~(a) of Hypothesis~\ref{hyp:embedding} (Proposition~\ref{prop:sym-bound}).
-      Test~1 holds by construction and does not discriminate between rows.
-      The tested conjugate-pair samples do not reach $d_\rho^2 = 4$, and the locking-broken control
-      recovers four operator directions only in an auxiliary PCA truncation.
-      The value $r_{\mathrm{eff}} = 3$ was reported by O28~\cite{Beau2026a32} across the pairs of its
-      perimeter; in the extended recomputation of O29~\cite{Beau2026a33} it is modal, not invariant, and
-      compatible with the adjoint (spin-$1$) carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$ conditional on O23's
-      supplied carrier and O27's admissible-saturation hypothesis, which the data do not identify.
-      The level labels of the table presuppose that Tests~1--3 have been run and that the covariance is
-      formed from the embedded products in $\mathrm{End}(V_\rho)$.
-      The O28 and O29 data meet neither condition: they are formed in $\mathrm{End}(H_{\mathrm{eff}})$ and
-      include no run of Tests~1--3, so they occupy no row of the table.
-      In single-sample runs their rank three is modal, with exceptions at $q = 101$ and $q = 211$; the
-      multi-sample follow-ups of O29 give modal rank three for every exceptional pair.
-    \end{remark}
+      The rows are stated for the covariance $\mathcal{C}^{\Phi}_c$ of the embedded products and its rank
+      $r^{\Phi}_{\mathrm{eff}}$, which require the embedding $\Phi_{q,\rho}$; Hypothesis~\ref{hyp:embedding}
+      leaves that embedding open, so no row beyond the first two can be evaluated on current data.
+      Tests~1 and~2 hold by construction and do not discriminate between the remaining rows.
+      Under condition~(a) of Hypothesis~\ref{hyp:embedding}, no row can support Level~III through
+      $r^{\Phi}_{\mathrm{eff}} = d_\rho^2$ (Proposition~\ref{prop:sym-bound}).
 
-    The row ``Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 3$'' is
-    not decisive: a bare effective rank does not fix a representation dimension, and
-    O29~\cite{Beau2026a33} records ranks four to nine at $q = 101$ and five at $q = 211$ on the same carrier,
-    with modal rank three in multi-sample follow-ups.
+      The O28 and O29 data are formed in $\mathrm{End}(H_{\mathrm{eff}})$ and include no run of
+      Tests~1--3, so they occupy no row of the table.
+      O28~\cite{Beau2026a32} reported $r_{\mathrm{eff}} = 3$ across the pairs of its perimeter at
+      $q \in \{61, 101, 151\}$.
+      In the single-sample runs of O29~\cite{Beau2026a33}, rank three is modal but not invariant: it holds
+      for $32/50$ pairs at $q = 101$, the others giving ranks four to nine, and for $103/105$ pairs at
+      $q = 211$, the other two giving rank five; the multi-sample follow-ups give modal rank three for
+      every exceptional pair.
+      The tested conjugate-pair samples do not reach rank four, and the locking-broken control recovers four
+      operator directions only in an auxiliary PCA truncation.
+      These data are compatible with the adjoint (spin-$1$) carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$,
+      conditional on O23's supplied carrier and O27's admissible-saturation hypothesis, which they do not
+      identify; a bare effective rank does not fix a representation dimension.
+    \end{remark}
 
   \section{Implications}
   \label{sec:implications}
@@ -920,8 +918,9 @@ $\delta_{\mathrm{pair}}$ stability holds.
     representation of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$, the admissibility
     thread $Q_8 \subset 2I \subset \mathrm{SU}(2)$, and the observable exponent
     $\delta_{\mathrm{pair}}$.
-    The tests of §\ref{sec:tests} can be executed on O25 data~\cite{Beau2026a29} without additional
-    computation.
+    Tests~1--3 of §\ref{sec:tests}, and the form of Test~4 in the measured carrier, can be executed on
+    O25 data~\cite{Beau2026a29} without additional computation; the Level~III forms of Tests~4 and~5
+    require the embedding $\Phi_{q,\rho}$.
     The effective dimension $r_{\mathrm{eff}} = 3$ was reported across the conjugate pairs of the
     perimeter of O28~\cite{Beau2026a32} at $q \in \{61, 101, 151\}$; the extended recomputation of
     O29~\cite{Beau2026a33} finds it modal rather than invariant ($32/50$ pairs at $q = 101$,
