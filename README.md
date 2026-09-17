@@ -132,8 +132,11 @@ Candidate:
 
 Thus:
 
-- the representation dimension can be **directly measured**
-- the conjecture is **fully falsifiable**
+- the covariance rank tests a property of the measured carrier \(H_{\mathrm{eff}}\), not of
+  \(V_\rho\): O29 finds the tested conjugate-pair samples below the target
+  \(d_\rho^2 = 4\), with a modal rank three compatible with the supplied adjoint carrier
+  and no carrier identification
+- a direct test of \(V_\rho\) requires an independent observable
 
 ## Foundational Chain from the Substrate
 
@@ -259,7 +262,8 @@ Identify the correct irrep ρ of 2I.
 
 ### Level III validation
 
-Test whether $r_{\mathrm{eff}} = d_\rho^2$.
+Construct an observable that measures \(\mathrm{End}(V_\rho)\) directly; the conjugate-pair
+covariance of Test 4 measures the carrier \(H_{\mathrm{eff}}\) instead (O29).
 
 ### Embedding
 
