@@ -128,7 +128,7 @@ $u u^{\mathsf T}$ with $u = \Phi(v_c^{(n)})$, so the trajectory spans at most
 $\mathrm{Sym}^2(V_\rho)$, of dimension 3 when $\dim_{\mathbb C} V_\rho = 2$. The rank-four target is
 excluded under that contract; other embeddings and constructions are not refuted.
 
-### 5. Falsifiability via effective dimension
+### 5. Diagnostics via effective dimension
 
 *Result.* The paper states diagnostics based on:
 
@@ -204,7 +204,7 @@ More precisely, the paper:
 - validation of Level III
 - identification of the correct irrep
 - embedding of $v_c^{(n)}$ into $V_\rho$
-- large-q validation of dimension
+- large-q stability of the modal carrier rank in $H_{\mathrm{eff}}$
 - analytical derivation of the sector
 
 ## Interpretation of the Result
@@ -285,7 +285,7 @@ $$
 
 ### Large-q regime
 
-Verify stability of dimension at larger primes.
+Check the stability of the modal carrier rank in $H_{\mathrm{eff}}$ at larger primes.
 
 ### Analytical derivation
 

@@ -582,8 +582,11 @@ $\delta_{\mathrm{pair}}$ stability holds.
       \]
       so the trajectory spans a subspace of $\mathrm{Sym}^2(V_\rho)$, the complex symmetric
       $d \times d$ matrices, of dimension $d(d+1)/2$.
-      The covariance~\eqref{eq:covariance} built from these products has rank at most
-      $d(d+1)/2$.
+      The covariance
+      $\mathcal{C}^{\Phi}_c := N^{-1}\sum_n \mathrm{vec}(\widehat{M}_n)\,\mathrm{vec}(\widehat{M}_n)^\dagger$
+      of the embedded products
+      $\widehat{M}_n := \Phi_{q,\rho}(v_c^{(n)}) \otimes \overline{\Phi_{q,\rho}(v_{q-c}^{(n)})}$,
+      formed as in~\eqref{eq:covariance}, has rank at most $d(d+1)/2$.
       For $d = 2$ this bound is $3$, and the rank-four target $d_\rho^2 = 4$ is excluded.
     \end{proposition}
 
@@ -592,9 +595,8 @@ $\delta_{\mathrm{pair}}$ stability holds.
       The matrix of $u \otimes \overline{w}$ has entries $u_a \overline{w_b} = u_a u_b$, which are
       symmetric in $a, b$; thus $u \otimes \overline{w} = u\,u^{\mathsf T} \in \mathrm{Sym}^2(V_\rho)$.
       The complex symmetric $d \times d$ matrices form a space of dimension $d(d+1)/2$.
-      The range of $\mathcal{C}_c = N^{-1}\sum_n \mathrm{vec}(\widetilde{M}_n)\,
-      \mathrm{vec}(\widetilde{M}_n)^\dagger$ is contained in the span of the vectors
-      $\mathrm{vec}(\widetilde{M}_n)$, hence in $\mathrm{vec}(\mathrm{Sym}^2(V_\rho))$.
+      The range of $\mathcal{C}^{\Phi}_c$ is contained in the span of the vectors
+      $\mathrm{vec}(\widehat{M}_n)$, hence in $\mathrm{vec}(\mathrm{Sym}^2(V_\rho))$.
       Since $d(d+1)/2 < d^2$ for $d \geq 2$, the value $d^2$ cannot be attained.
     \end{proof}
 
@@ -605,6 +607,10 @@ $\delta_{\mathrm{pair}}$ stability holds.
     decide whether Hypothesis~\ref{hyp:embedding} holds.
     It fixes what a Level~III rank test can decide under that contract: the target $d_\rho^2 = 4$
     of the original Test~4 criterion (§\ref{sec:test4}) is not attainable there, for any data.
+    For $d_\rho = 2$ the bound is $3$, the same value as the modal rank observed in
+    $\mathrm{End}(H_{\mathrm{eff}})$: a rank equal to $3$ therefore cannot separate a Level~III trajectory
+    from the adjoint reading of $H_{\mathrm{eff}}$, and it cannot be inverted to $d_\rho = 2$
+    (O29~\cite{Beau2026a33}).
 
   \subsection{Structural interpretation}
     \label{sec:interpretation}
@@ -725,8 +731,9 @@ $\delta_{\mathrm{pair}}$ stability holds.
     \item If $r_{\mathrm{eff}}$ varies across pairs or primes: Level~III fails;
     the identification holds at most at Level~II.
   \end{itemize}
-  Under condition~(a) of Hypothesis~\ref{hyp:embedding}, neither of the first two outcomes can
-  occur: Proposition~\ref{prop:sym-bound} bounds $r_{\mathrm{eff}}$ by $d_\rho(d_\rho+1)/2 < d_\rho^2$.
+  Under condition~(a) of Hypothesis~\ref{hyp:embedding} and for $d_\rho \geq 2$, neither of the first two
+  outcomes can occur: Proposition~\ref{prop:sym-bound} bounds $r_{\mathrm{eff}}$ by
+  $d_\rho(d_\rho+1)/2 < d_\rho^2$.
   This criterion is reinterpreted in Remark~\ref{rem:criterion-reform} below,
   following O29~\cite{Beau2026a33}: the conjugate-pair covariance is formed in $\mathrm{End}(H_{\mathrm{eff}})$
   rather than $\mathrm{End}(V_\rho)$, the tested samples do not reach $d_\rho^2 = 4$, and the modal value
@@ -800,12 +807,14 @@ $\delta_{\mathrm{pair}}$ stability holds.
         \hline
         Outcome & Interpretation \\
         \hline
-        Tests~1--3 fail & Dictionary fails; §\ref{sec:dictionary} must be revised \\
-        Tests~1--3 pass, $r_{\mathrm{eff}}$ variable & Level~I only \\
+        Test~1 or Test~2 fails & Implementation error: both hold by construction \\
+        Test~3 fails & Dictionary fails; §\ref{sec:dictionary} must be revised \\
+        Tests~1--3 pass, $r_{\mathrm{eff}}$ variable & Level~III fails; at most Level~II \\
         Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 3$ & not the modal value observed in
         $\mathrm{End}(H_{\mathrm{eff}})$; a bare
         effective rank does not by itself bear on the carrier (O29) \\
-        Tests~1--3 pass, $r_{\mathrm{eff}} = 3$ (compatible with the supplied adjoint spin-$1$ carrier), Test~5 fails
+        Tests~1--3 pass, $r_{\mathrm{eff}} = 3$ (compatible with the supplied adjoint spin-$1$ carrier, and equal to
+        the Level~III bound under condition~(a), hence not discriminating), Test~5 fails
         & Level~II; carrier not identified, spin-$\tfrac{1}{2}$ target not decided by Test~4 \\
         Tests~1--5 pass & Finite-data evidence compatible with the supplied adjoint spin-$1$ carrier (rank data of
         O28--O29); no
@@ -825,10 +834,12 @@ $\delta_{\mathrm{pair}}$ stability holds.
       perimeter; in the extended recomputation of O29~\cite{Beau2026a33} it is modal, not invariant, and
       compatible with the adjoint (spin-$1$) carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$ conditional on O23's
       supplied carrier and O27's admissible-saturation hypothesis, which the data do not identify.
-      Because $r_{\mathrm{eff}}$ varies across pairs at $q = 101$ and $q = 211$, those data fall, for
-      Test~4, in the row ``$r_{\mathrm{eff}}$ variable''; since they are formed in
-      $\mathrm{End}(H_{\mathrm{eff}})$ rather than $\mathrm{End}(V_\rho)$, they decide no row of the table
-      for Level~III.
+      The level labels of the table presuppose that Tests~1--3 have been run and that the covariance is
+      formed from the embedded products in $\mathrm{End}(V_\rho)$.
+      The O28 and O29 data meet neither condition: they are formed in $\mathrm{End}(H_{\mathrm{eff}})$ and
+      include no run of Tests~1--3, so they occupy no row of the table.
+      In single-sample runs their rank three is modal, with exceptions at $q = 101$ and $q = 211$; the
+      multi-sample follow-ups of O29 give modal rank three for every exceptional pair.
     \end{remark}
 
     The row ``Tests~1--3 pass, $r_{\mathrm{eff}}$ fixed $\neq 3$'' is
@@ -881,8 +892,10 @@ $\delta_{\mathrm{pair}}$ stability holds.
     admissible-saturation hypothesis,
     without identifying it; the spin-$\tfrac{1}{2}$ selection rests on minimality and is not decided by
     Test~4 (O29~\cite{Beau2026a33}).
-    The target space $\mathrm{End}(V_\rho) \simeq \mathbb{C}^{2 \times 2}$ is the minimal ambient space for
-    admissible spectral dynamics; a direct test of $V_\rho$ requires an independent observable and a typed bridge to
+    The target space $\mathrm{End}(V_\rho) \simeq \mathbb{C}^{2 \times 2}$ is the ambient space of the Level~III
+    products, whose trajectory lies in the three-dimensional $\mathrm{Sym}^2(V_\rho)$ under condition~(a)
+    (Proposition~\ref{prop:sym-bound}); a direct test of $V_\rho$ requires an independent observable and a typed
+    bridge to
     $V_\rho$, both left open in O29, and the dictionary of §\ref{sec:dictionary} remains valid throughout.
 
   \subsection{Role of non-injectivity}
