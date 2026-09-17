@@ -140,8 +140,8 @@ Thus:
 
 - involution compatibility of $\widetilde{M}_n$ holds by construction and is not a discriminating test
 - the conjugate-pair covariance computable from O25 data is formed in the measured carrier
-  $H_{\mathrm{eff}}$, not in $\mathrm{End}(V_\rho)$: O29 finds the tested samples below rank four, with a modal
-  rank three compatible with the adjoint carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$, itself conditional on
+  $H_{\mathrm{eff}}$, not in $\mathrm{End}(V_\rho)$: O29 finds a modal rank three, with seed-sensitive single-sample
+  exceptions above it, none of which measures $\mathrm{End}(V_\rho)$; that modal rank is compatible with the adjoint carrier $H_{\mathrm{eff}} \simeq \mathfrak{su}(2)$, itself conditional on
   O23's supplied carrier and O27's admissible-saturation hypothesis, and no carrier identification
 - under the embedding's involution-equivariance condition the rank-four target is excluded
   (symmetric-square bound above)
