@@ -4,5 +4,5 @@
   "main_tex": "tex/SpectralO26.tex",
   "zenodo_id": 19488845,
   "doi": "10.5281/zenodo.19488845",
-  "notes": "Version 2.2 requalifies one sentence of the introduction: the pair values of delta_pair are no longer said to lie in an 'admissible window' [7.4, 10.6]; the interval is described as a historical comparison range carrying no admissibility status. The boundary of the beta* interpretation (Section 6.2), which denies a derived reciprocal transfer and keeps the reciprocal only as a phenomenological comparison, is unchanged. No other statement is changed."
+  "notes": "Version 2.2 requalifies the introduction: the pair values of delta_pair are no longer said to lie in an 'admissible window' [7.4, 10.6]; the interval is described as a historical comparison range carrying no admissibility status. The boundary of the beta* interpretation (Section 6.2), which denies a derived reciprocal transfer and keeps the reciprocal only as a phenomenological comparison, is unchanged. The claim that O16 resolved the historical-window mismatch by identifying the correct observable is also withdrawn. The separate fibre and matrix results are unchanged."
 }
