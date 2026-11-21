@@ -29,8 +29,9 @@ This turns σpair from a constructed observable into a candidate **intrinsic nor
 
 **O16–O25** provide the inputs:
 
-- the structurally motivated candidate observable is the canonical pair quantity  
-  $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ (its fibre reading is the open bridge of O18)
+- the structurally motivated candidate observable is the pair product
+  $\sigma_c(n)\,\sigma_{q-c}(n)$, written $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ here although it is
+  not the canonical normalisation proposed in O19 (open tests); its fibre reading is the open bridge of O18
 - the reference value $\delta_{\mathrm{pair}} \approx 7.44$ lies in the historical
   phenomenological window $[7.4, 10.6]$
 - vertical fibre structure does not change the observable rank (**O24**)
