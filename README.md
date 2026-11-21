@@ -4,7 +4,7 @@ via Binary-Icosahedral Representation*.
 
 This work extends the **spectral admissibility sub-programme** by providing
 the first **representation-theoretic interpretation of the pair observable**
-introduced and numerically validated in **O16–O25**.
+introduced in **O16** and studied numerically in **O25**.
 
 It addresses the next structural question after **O25**:
 
@@ -186,7 +186,8 @@ More precisely, the paper:
 ### Established input
 
 - pair observable (**O16–O21**)
-- conjugation identity and normalisation (**O17–O19**; fibre identification open, O18)
+- conjugation identity (**O17**) and the open normalisation proposal of **O19**; $r(c,q)\equiv1$ on the
+  real pipeline within O16's contract; fibre identification open (O18)
 - projection locking (**O22**)
 - conditional rank-three carrier (**O23** Theorem 3.1, supplied spinor carrier)
 - rank stability (**O24**)
@@ -227,7 +228,7 @@ Thus:
 **O26** completes the observable hierarchy:
 
 - **O16**: pair observable
-- **O17–O19**: conjugation identity and normalisation
+- **O17–O19**: conjugation identity (O17); normalisation proposed with open tests (O19)
 - **O20–O21**: persistence
 - **O22**: projection locking
 - **O23**: conditional threshold dimension (supplied carrier)
