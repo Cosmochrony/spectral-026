@@ -31,7 +31,7 @@ This turns σpair from a constructed observable into a candidate **intrinsic nor
 
 - the structurally motivated candidate observable is the pair product
   $\sigma_c(n)\,\sigma_{q-c}(n)$, written $\sigma_{\mathrm{pair}}^{\mathrm{can}}(n)$ here although it is
-  not the canonical normalisation proposed in O19 (open tests); its fibre reading is the open bridge of O18
+  not the canonical normalisation proposed in O19 (not established as pipeline independent); its fibre reading is the open bridge of O18
 - the reference value $\delta_{\mathrm{pair}} \approx 7.44$ lies in the historical
   phenomenological window $[7.4, 10.6]$
 - vertical fibre structure does not change the observable rank (**O24**)
@@ -229,7 +229,7 @@ Thus:
 **O26** completes the observable hierarchy:
 
 - **O16**: pair observable
-- **O17–O19**: conjugation identity (O17); normalisation proposed with open tests (O19)
+- **O17–O19**: conjugation identity (O17); normalisation proposed, not established as pipeline independent (O19)
 - **O20–O21**: persistence
 - **O22**: projection locking
 - **O23**: conditional threshold dimension (supplied carrier)
